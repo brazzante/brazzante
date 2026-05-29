@@ -1149,31 +1149,46 @@ POPUP MANUTENÇÃO
 @media(max-width:900px){
 
     .popup-manutencao{
-
         flex-direction:column;
+        width:95%;
+        max-width:420px;
+        min-height:auto;
     }
 
     .popup-left{
-
         width:100%;
+        padding:25px;
     }
 
     .popup-right{
-
         width:100%;
-        min-height:250px;
+        min-height:180px;
     }
 
     .popup-right::before{
-
         display:none;
     }
 
-    .popup-left h1{
-
-        font-size:38px;
+    .popup-right img{
+        max-height:180px;
     }
 
+    .popup-left h1{
+        font-size:28px;
+        margin-bottom:15px;
+    }
+
+    .popup-left p{
+        font-size:15px;
+        line-height:1.5;
+        margin-bottom:20px;
+    }
+
+    .popup-btn{
+        width:100%;
+        text-align:center;
+        padding:14px;
+    }
 }
 </style>
 </head>
