@@ -1,0 +1,3367 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- FAVICON -->
+<link rel="icon" type="image/png" href="imagens/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brazzante</title>
+
+<style>
+/* SETAS POPUP */
+
+.popup-seta{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(0,0,0,0.7);
+
+color:white;
+
+font-size:30px;
+
+cursor:pointer;
+
+z-index:10000;
+
+transition:0.3s;
+
+}
+
+.popup-seta:hover{
+
+background:#a11212;
+
+}
+
+.esquerda-popup{
+
+left:30px;
+
+}
+
+.direita-popup{
+
+right:30px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#2b0000;
+    color:#f2f2f2;
+}
+
+/* CONTAINER PADRÃO */
+
+.container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:0 auto;
+}
+
+/* BANNERS PROMOCIONAIS */
+
+.banners-promocionais{
+
+    width:100%;
+
+    padding:40px 20px;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.banner-grid{
+
+    width:100%;
+
+    max-width:1200px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:15px;
+}
+
+.banner-grande img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+.banner-lateral{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.banner-lateral img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+/* EFEITO HOVER */
+
+.banner-grid img:hover{
+
+    transform:scale(1.02);
+
+    opacity:0.95;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .banner-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo-img{
+
+    width:140px;
+    height:40px;
+
+    object-fit:contain;
+
+    image-rendering:auto;
+
+    display:block;
+
+}
+
+.logo span{
+    color:#a11212;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* BANNER CARROSSEL */
+
+.banner-slider{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    /* ALTURA RESPONSIVA */
+    height:clamp(120px, 22vw, 320px);
+
+    background:#000;
+}
+
+/* PAUSA AO PASSAR O MOUSE */
+
+.banner-slider:hover .slider-track{
+    animation-play-state:paused;
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .banner-slider{
+
+        height:clamp(220px, 55vw, 500px);
+    }
+
+    .slide{
+
+        aspect-ratio:16/9;
+    }
+
+    .slide-conteudo{
+
+        width:92%;
+    }
+
+}
+
+/* SLIDER CONTÍNUO */
+
+.banner-slider{
+
+    width:100%;
+
+    overflow:hidden;
+
+    position:relative;
+
+    padding:20px 0;
+}
+
+.video-track{
+
+    display:flex;
+
+    gap:20px;
+
+    width:max-content;
+
+    animation:slideVideos 40s linear infinite;
+}
+
+/* PAUSA AO PASSAR MOUSE */
+
+.banner-slider:hover .video-track{
+
+    animation-play-state:paused;
+}
+
+.video-slide{
+
+    width:520px;
+
+    flex-shrink:0;
+}
+
+.video-slide iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#000;
+
+    display:block;
+
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes slideVideos{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .video-slide{
+
+        width:320px;
+    }
+
+}
+
+/* PRODUTOS */
+
+.produtos{
+    padding:70px 50px;
+}
+
+.titulo-secao{
+    font-size:38px;
+    margin-bottom:40px;
+    text-align:center;
+    color:#a11212;
+}
+
+.grid-produtos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.produto{
+    background:rgb(26, 26, 26);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.produto:hover{
+    transform:translateY(-8px);
+}
+
+.carrossel-container{
+    position:relative;
+    background:#ffffff;
+}
+
+.carrossel-img{
+    width:100%;
+    height:260px;
+    object-fit:contain;
+    padding:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.carrossel-img:hover{
+    transform:scale(1.03);
+}
+
+/* BOTÕES CARROSSEL */
+
+.btn-carrossel{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0, 0, 0, 0.7);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-carrossel:hover{
+    background:#a11212;
+}
+
+.btn-esquerda{
+    left:10px;
+}
+
+.btn-direita{
+    right:10px;
+}
+
+.produto-info{
+    padding:20px;
+}
+
+.produto-info h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.preco{
+    color:#16a34a;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.btn-comprar{
+    display:block;
+    text-align:center;
+    background:#940000;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-comprar:hover{
+    background:#2b0000;
+}
+
+/* BLOG */
+
+.blog{
+    padding:70px 50px;
+    background:#220000;
+}
+
+.posts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.post{
+    background:#5c3434;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.post:hover{
+    transform:translateY(-5px);
+}
+
+.post h3{
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    color:#380000;
+}
+
+/* POPUP */
+
+#popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.92);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+#popup-img{
+    max-width:90%;
+    max-height:80%;
+    border-radius:15px;
+}
+
+#fechar-popup{
+    margin-top:20px;
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    background:#a11212;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .produtos,
+    .blog{
+        padding:50px 20px;
+    }
+
+}
+/* FUNDO ANIMADO */
+
+body{
+    overflow-x:hidden;
+    position:relative;
+    background:#140000;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* BANNER SLIDER */
+
+.banner-grande{
+
+    position:relative;
+}
+
+.banner-grande img{
+
+    width:100%;
+    border-radius:12px;
+}
+
+/* SETAS */
+
+.seta{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:rgba(0,0,0,0.5);
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+.esquerda{
+
+    left:10px;
+}
+
+.direita{
+
+    right:10px;
+}
+
+/* BOLINHAS */
+
+.bolinhas{
+
+    position:absolute;
+
+    bottom:12px;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+}
+
+.bolinhas span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:0.5;
+
+    cursor:pointer;
+}
+
+/* WHATSAPP FLUTUANTE */
+
+.whatsapp-float{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:70px;
+
+height:70px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.35);
+
+z-index:9999;
+
+transition:0.3s;
+
+animation:flutuarWhatsapp 2s infinite ease-in-out;
+
+}
+
+.whatsapp-float:hover{
+
+transform:scale(1.12);
+
+}
+
+.whatsapp-float img{
+
+width:38px;
+
+height:38px;
+
+}
+
+/* ANIMAÇÃO */
+
+@keyframes flutuarWhatsapp{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.whatsapp-float{
+
+width:60px;
+
+height:60px;
+
+bottom:20px;
+
+right:20px;
+
+}
+
+.whatsapp-float img{
+
+width:32px;
+
+height:32px;
+
+}
+
+}
+
+/* saiba mais pop up lateral */
+
+.popup-lateral{
+
+    display: none;
+
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+
+    width: 320px;
+
+    background: #111;
+    color: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+    animation: aparecerLateral 0.5s ease;
+}
+
+/* BOTÃO FECHAR */
+
+.fechar-popup{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: white;
+}
+
+/* TEXTO */
+
+.popup-lateral h3{
+    margin-bottom: 10px;
+}
+
+.popup-lateral p{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* BOTÃO WHATSAPP */
+
+.botao-popup{
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    background: #940000;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-popup:hover{
+    transform: scale(1.05);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecerLateral{
+
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.botao-saiba-mais{
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    background: #940000;
+
+    color: white !important;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+.botao-saiba-mais:hover{
+
+    background: #af3434;
+
+}
+
+/* CAIXA DE DESCONTO em cada img */
+
+.desconto{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    background:#ff3b30;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    z-index:20;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+/* ===========================
+POPUP MANUTENÇÃO
+=========================== */
+
+.popup-overlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.85);
+
+    backdrop-filter:blur(6px);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999;
+}
+
+.popup-manutencao{
+
+    width:90%;
+    max-width:950px;
+
+    min-height:420px;
+
+    background:#1a1a1a;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    box-shadow:
+    0 0 50px rgba(0,0,0,.6);
+}
+
+.popup-left{
+
+    width:55%;
+
+    padding:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.popup-linha{
+
+    width:90px;
+    height:6px;
+
+    background:#8f0000;
+
+    margin-bottom:25px;
+}
+
+.popup-left h1{
+
+    font-size:56px;
+
+    line-height:1;
+
+    color:#8f0000;
+
+    margin-bottom:25px;
+
+    font-weight:900;
+}
+
+.popup-left p{
+
+    color:#ffffff;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.popup-btn{
+
+    display:inline-block;
+
+    width:fit-content;
+
+    padding:18px 35px;
+
+    background:#8f0000;
+
+    color:rgb(255, 255, 255);
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:6px;
+
+    transition:.3s;
+}
+
+.popup-btn:hover{
+
+    background:#c40000;
+
+    transform:translateY(-3px);
+}
+
+.popup-right{
+
+    width:45%;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:flex-end;
+
+    background:
+    linear-gradient(
+    135deg,
+    #8f0000 0%,
+    #500909 100%
+    );
+}
+
+.popup-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120px;
+
+    top:0;
+
+    width:250px;
+    height:100%;
+
+    background:#1a1a1a;
+
+    transform:skewX(-25deg);
+}
+
+.popup-right img{
+
+    position:relative;
+
+    z-index:2;
+
+    max-height:420px;
+
+    width:auto;
+
+    object-fit:contain;
+}
+
+.popup-close{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    width:35px;
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ddd;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    z-index:100;
+}
+
+.popup-close:hover{
+
+    background:#bbb;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .popup-manutencao{
+
+        flex-direction:column;
+    }
+
+    .popup-left{
+
+        width:100%;
+    }
+
+    .popup-right{
+
+        width:100%;
+        min-height:250px;
+    }
+
+    .popup-right::before{
+
+        display:none;
+    }
+
+    .popup-left h1{
+
+        font-size:38px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+<!-- POPUP LOJA EM MANUTENÇÃO -->
+
+<div id="popupManutencao" class="popup-overlay">
+
+    <div class="popup-manutencao">
+
+        <button class="popup-close"
+        onclick="fecharPopupPrincipal()">
+            ✕
+        </button>
+
+        <div class="popup-left">
+
+            <div class="popup-linha"></div>
+
+            <h1>
+                LOJA EM<br>
+                MANUTENÇÃO
+            </h1>
+
+            <p>
+                <h3><i>Nossa loja está passando por melhorias.</i></h3>
+                <br><br>
+                Enquanto isso, confira nossos documentários sobre jogos clássicos, MMORPGs, nostalgia da internet e curiosidades dos anos 2000.
+            </p>
+
+            <a
+            href="documentarios.html"
+            class="popup-btn">
+
+                VER DOCUMENTÁRIOS
+
+            </a>
+
+        </div>
+
+        <div class="popup-right">
+
+            <img
+            src="imagens/personagem.webp"
+            alt="Personagem">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FIM DO POPUP ABERTURA DO SITE -->
+
+<div id="particles"></div>
+<header>
+    <div class="container">
+
+<div class="menu">
+
+<div class="logo">
+    <img
+    src="imagens/logo.png"
+    alt="Brazzante Logo"
+    class="logo-img">
+</div>
+
+<nav><ul>
+
+<li><a href="#">Início</a></li>
+
+<li><a href="#produtos">Loja</a></li>
+
+<li><a href="documentarios.html">Documentários</a></li>
+
+<li><a href="#blog">Novidades</a></li>
+
+<li><a href="#contato">Contato</a></li>
+
+</ul>
+</nav>
+
+</div>
+</div>
+</header>
+
+<!-- BANNERS PROMOCIONAIS -->
+
+<section class="banners-promocionais">
+
+    <div class="banner-grid">
+
+<!-- BANNER GRANDE -->
+
+<div class="banner-grande">
+
+    <a id="banner-link"
+    href="https://link1.com"
+    target="_blank">
+
+        <img
+        id="banner-img"
+        src="imagens/banner1.png"
+        alt="Banner">
+
+    </a>
+
+    <!-- SETAS -->
+
+    <button class="seta esquerda" onclick="anteriorBanner()">
+❮
+    </button>
+
+    <button class="seta direita" onclick="proximoBanner()">
+❯
+    </button>
+
+    <!-- BOLINHAS -->
+
+    <div class="bolinhas">
+
+        <span onclick="trocarBanner(0)"></span>
+        <span onclick="trocarBanner(1)"></span>
+        <span onclick="trocarBanner(2)"></span>
+
+    </div>
+
+</div>
+
+        <!-- LADO DIREITO -->
+        <div class="banner-lateral">
+
+            <a
+            href="https://store.steampowered.com/app/4305620/Brazzante/"
+            target="_blank">
+
+                <img
+                src="imagens/banner2.png"
+                alt="Promoção 2">
+
+            </a>
+
+            <a
+            href="https://www.youtube.com/@obrazzante2"
+            target="_blank">
+
+                <img
+                src="imagens/banner3.png"
+                alt="Promoção 3">
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUTOS -->
+
+<section class="produtos" id="produtos">
+
+    <div class="container">
+
+<h2 class="titulo-secao">
+Produtos em Destaque
+</h2>
+
+<div class="grid-produtos">
+
+<!-- PRODUTO 1 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto1/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto1/img (1).png",
+"imagens/produto1/img (2).png",
+"imagens/produto1/img (3).png",
+"imagens/produto1/img (4).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button
+class="btn-carrossel btn-esquerda"
+onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button
+class="btn-carrossel btn-direita"
+onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>
+Suporte Controle para Parede (Fixação c\ Dupla face)
+</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a
+href="https://shopee.com.br/Suporte-Para-Um-Controle-Xbox-E-Suporte-Para-Fone-headset-i.380633670.23897458768"
+target="_blank"
+class="btn-comprar">
+
+Comprar
+
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 2 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto2/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto2/img (1).png",
+"imagens/produto2/img (2).png",
+"imagens/produto2/img (3).png",
+"imagens/produto2/img (4).png",
+"imagens/produto2/img (5).png",
+"imagens/produto2/img (6).png",
+"imagens/produto2/img (7).png",
+"imagens/produto2/img (8).png",
+"imagens/produto2/img (9).png",
+"imagens/produto2/img (10).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button
+class="btn-carrossel btn-esquerda"
+onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button
+class="btn-carrossel btn-direita"
+onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>
+Suporte Controle Mesa (Diversas Logos)
+</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a
+href="https://shopee.com.br/Suporte-de-Controle-Xbox-Series-S-X-com-Espa%C3%A7o-para-Pilhas-%E2%80%93-Organizador-Gamer-i.550354500.21699882617"
+target="_blank"
+class="btn-comprar">
+
+Comprar
+
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 3 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto3/img (3).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto3/img (3).png",
+"imagens/produto3/img (4).png",
+"imagens/produto3/img (7).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha 120mm Gastly 1º Evolução</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br/KIT-GRADE-GRELHA-PARA-COOLER-FAN-GRILL-120MM-X-120MM-POKEMON-GENGAR-HAUNTER-GASTLY-PC-SETUP-GAMER-i.1468698669.23294296982" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 4 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto3/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto3/img (1).png",
+"imagens/produto3/img (4).png",
+"imagens/produto3/img (5).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha 120mm Haunter 2º Evolução</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br/KIT-GRADE-GRELHA-PARA-COOLER-FAN-GRILL-120MM-X-120MM-POKEMON-GENGAR-HAUNTER-GASTLY-PC-SETUP-GAMER-i.1468698669.23294296982" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 5 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto3/img (2).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto3/img (2).png",
+"imagens/produto3/img (4).png",
+"imagens/produto3/img (6).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha 120mm Gengar 3º Evolução</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br/KIT-GRADE-GRELHA-PARA-COOLER-FAN-GRILL-120MM-X-120MM-POKEMON-GENGAR-HAUNTER-GASTLY-PC-SETUP-GAMER-i.1468698669.23294296982" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 6 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto3/img (4).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto3/img (1).png",
+"imagens/produto3/img (2).png",
+"imagens/produto3/img (3).png",
+"imagens/produto3/img (4).png",
+"imagens/produto3/img (5).png",
+"imagens/produto3/img (6).png",
+"imagens/produto3/img (7).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>kit 3 Grade de Ventoinha 120mm Gengar Evolução</h3>
+
+<p class="preco">
+R$ 59,99
+</p>
+
+<a href="https://shopee.com.br/KIT-GRADE-GRELHA-PARA-COOLER-FAN-GRILL-120MM-X-120MM-POKEMON-GENGAR-HAUNTER-GASTLY-PC-SETUP-GAMER-i.1468698669.23294296982" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 7 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -20%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto4/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto4/img (1).png",
+"imagens/produto4/img (2).png",
+"imagens/produto4/img (3).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Kit 4 Capas de teclas mecânicas Transformice</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://shopee.com.br/Keycaps-de-Queijo-%E2%80%93-Conjunto-Divertido-para-Teclado-Gamer-%F0%9F%A7%80%E2%8C%A8%EF%B8%8F%E2%9C%A8-i.286800866.58252539023" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 8 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto5/img (2).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto5/img (2).png",
+"imagens/produto5/img (5).png",
+"imagens/produto5/img (6).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Spider man Tom Holland 120mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://shopee.com.br/Kit-3-Grade-de-Prote%C3%A7%C3%A3o-Fan-120mm-PC-Gamer-Grade-Decorativa-Cooler-i.377137261.23294670578" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 9 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto5/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto5/img (1).png",
+"imagens/produto5/img (7).png",
+"imagens/produto5/img (6).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Spider man Tobey Maguire 120mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://shopee.com.br/Kit-3-Grade-de-Prote%C3%A7%C3%A3o-Fan-120mm-PC-Gamer-Grade-Decorativa-Cooler-i.377137261.23294670578" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 10 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto5/img (3).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto5/img (3).png",
+"imagens/produto5/img (8).png",
+"imagens/produto5/img (6).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Spider man Andrew Garfield 120mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://shopee.com.br/Kit-3-Grade-de-Prote%C3%A7%C3%A3o-Fan-120mm-PC-Gamer-Grade-Decorativa-Cooler-i.377137261.23294670578" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 11 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto5/img (6).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto5/img (1).png",
+"imagens/produto5/img (2).png",
+"imagens/produto5/img (3).png",
+"imagens/produto5/img (4).png",
+"imagens/produto5/img (5).png",
+"imagens/produto5/img (6).png",
+"imagens/produto5/img (7).png",
+"imagens/produto5/img (8).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Kit 4 Grade de Ventoinha Spider man 120mm</h3>
+
+<p class="preco">
+R$ 79,90
+</p>
+
+<a href="https://shopee.com.br/Kit-3-Grade-de-Prote%C3%A7%C3%A3o-Fan-120mm-PC-Gamer-Grade-Decorativa-Cooler-i.377137261.23294670578" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 12 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto6/img (4).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto6/img (4).png",
+"imagens/produto6/img (9).png",
+"imagens/produto6/img (5).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Kamui 120mm</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 13 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto6/img (3).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto6/img (3).png",
+"imagens/produto6/img (8).png",
+"imagens/produto6/img (5).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Kamui 120mm</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 14 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto6/img (2).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto6/img (2).png",
+"imagens/produto6/img (7).png",
+"imagens/produto6/img (5).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Uchiha 120mm</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 15 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto6/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto6/img (1).png",
+"imagens/produto6/img (6).png",
+"imagens/produto6/img (5).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Magenkyo Sharingan 120mm</h3>
+
+<p class="preco">
+R$ 19,99
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 16 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto6/img (5).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto6/img (1).png",
+"imagens/produto6/img (2).png",
+"imagens/produto6/img (3).png",
+"imagens/produto6/img (4).png",
+"imagens/produto6/img (5).png",
+"imagens/produto6/img (6).png",
+"imagens/produto6/img (7).png",
+"imagens/produto6/img (8).png",
+"imagens/produto6/img (9).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Kit 4 Grade de Ventoinha Naruto 120mm</h3>
+
+<p class="preco">
+R$ 59,99
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 17 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto7/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto7/img (1).png",
+"imagens/produto7/img (2).png",
+"imagens/produto7/img (3).png",
+"imagens/produto7/img (4).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Protetor de Botão</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://mercadolivre.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 18-->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto8/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto8/img (1).png",
+"imagens/produto8/img (2).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Fortnite 120 mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 19 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto9/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto9/img (1).png",
+"imagens/produto9/img (2).png",
+"imagens/produto9/img (3).png",
+"imagens/produto9/img (4).png",
+"imagens/produto9/img (5).png",
+"imagens/produto9/img (6).png",
+"imagens/produto9/img (7).png",
+"imagens/produto9/img (8).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Lâmpada Dragão HABBO HOTEL (diversas cores)</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a href="https://mercadolivre.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 20 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto10/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto10/img (1).png",
+"imagens/produto10/img (2).png",
+"imagens/produto10/img (3).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Kit 4 Capas de teclas mecânicas Gameboy Pokemon</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 21 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto11/img (3).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto11/img (3).png",
+"imagens/produto11/img (7).png",
+"imagens/produto11/img (4).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Digimon Agumon 120mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://mercadolivre.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 22 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto11/img (2).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto11/img (2).png",
+"imagens/produto11/img (6).png",
+"imagens/produto11/img (4).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Digimon MetalGreymon 120mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://mercadolivre.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 23 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto11/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto11/img (1).png",
+"imagens/produto11/img (4).png",
+"imagens/produto11/img (5).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Grade de Ventoinha Digimon WarGreymon 120mm</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://mercadolivre.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 24 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+<img
+class="carrossel-img"
+src="imagens/produto11/img (4).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto11/img (4).png",
+"imagens/produto11/img (3).png",
+"imagens/produto11/img (2).png",
+"imagens/produto11/img (1).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Kit 3 grade de Ventoinha Digimon Agumon, Greymon, Metal Wargreymon</h3>
+
+<p class="preco">
+R$ 59,90
+</p>
+
+<a href="https://mercadolivre.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 25 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -20%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto12/img (1).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto12/img (1).png",
+"imagens/produto12/img (2).png",
+"imagens/produto12/img (3).png",
+"imagens/produto12/img (4).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>kit 5 Metal Slug Power Ups para decorar</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 26 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto13/img (4).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto13/img (1).png",
+"imagens/produto13/img (2).png",
+"imagens/produto13/img (3).png",
+"imagens/produto13/img (4).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Placa Decorativa Sensei Club Penguin</h3>
+
+<p class="preco">
+R$ 24,90
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- PRODUTO 27 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/produto14/img (0).png"
+
+data-index="0"
+
+data-imagens='[
+"imagens/produto14/img (0).png",
+"imagens/produto14/img (1).png",
+"imagens/produto14/img (2).png",
+"imagens/produto14/img (3).png"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Placa Decorativa Brazzante</h3>
+
+<p class="preco">
+R$ 24,90
+</p>
+
+<a href="https://shopee.com.br" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BLOG -->
+
+<section class="blog" id="blog">
+
+    <div class="container">
+
+        <h2 class="titulo-secao">
+            Últimas Novidades
+        </h2>
+
+        <div class="posts">
+
+            <!-- POST 1 -->
+            <div class="post">
+
+                <h3>
+                    Brazzante tem data marcada para chegar ao Steam 🎮
+                </h3>
+
+                <p>
+                    O indie brasileiro <strong>Brazzante</strong> acaba de ganhar página oficial no Steam e já chamou atenção pelo seu estilo visual totalmente desenhado à mão e pela proposta diferenciada de gameplay.
+                </p>
+                <br>
+                <p>
+                    O jogo mistura elementos de roguelike, estratégia e cartas em partidas infinitas inspiradas nas mecânicas clássicas de “Pedra, Papel e Tesoura”.
+                </p>
+                <br>
+                <p>
+                    Durante a gameplay, o jogador precisa sobreviver ao maior número possível de rodadas enquanto escolhe habilidades passivas, melhorias permanentes e modificadores que tornam cada partida única.
+                </p>
+                <br>
+                <p>
+                    A cada 10 rounds, novas escolhas aparecem, aumentando tanto a dificuldade quanto o potencial de criar combinações extremamente poderosas.
+                </p>
+                <br>
+                <p>
+                    Outro grande destaque de Brazzante é seu visual “doodle”, com arte totalmente hand-drawn, trazendo uma identidade única dentro da cena indie.
+                </p>
+                <br>
+                <p>
+                    O lançamento oficial está marcado para <strong>22 de julho de 2026</strong>, com suporte para português brasileiro, inglês e espanhol.
+                </p>
+                <br>
+                <a 
+                href="https://store.steampowered.com/app/4305620/Brazzante/" 
+                target="_blank" 
+                class="botao-saiba-mais">
+                    Saiba Mais
+                </a>
+
+            </div>
+
+            <!-- POST 2 -->
+            <div class="post">
+
+                <h3>
+                    Produzimos Peças Personalizadas Sob Encomenda 🖨️
+                </h3>
+
+                <p>
+                    Está procurando peças únicas para decoração, setup gamer, organização ou projetos personalizados?
+                </p>
+                <br>
+                <p>
+                    Produzimos peças sob encomenda com impressão 3D de alta qualidade, totalmente personalizadas do jeito que você imaginar.
+                </p>
+                <br>
+                <ul>
+                    <li>✔️ Peças de até 18cm</li>
+                    <br>
+                    <li>✔️ Modelos variados</li>
+                    <br>
+                    <li>✔️ Produção em quantidade</li>
+                    <br>
+                    <li>✔️ Personalização com logos, cores e estilos exclusivos</li>
+                    <br>
+                    <li>✔️ Ideal para setups gamers, decoração, brindes, suportes e organizadores</li>
+                </ul>
+                <br>
+                <p>
+                    Trabalhamos tanto com pedidos unitários quanto encomendas maiores para revenda, eventos e projetos personalizados.
+                </p>
+                <br>
+                <p>
+                    📩 Entre em contato com nosso suporte e consulte valores, prazos e possibilidades para o seu projeto personalizado.
+                </p>
+                <br>
+                <a 
+                href="https://wa.me/5519989087008?text=Olá.%20Quero%20fazer%20uma%20encomenda%20com%20vocês.%20Como%20funciona?" 
+                target="_blank" 
+                class="botao-saiba-mais">
+                    Saiba Mais
+                </a>
+
+            </div>
+
+            <!-- POST 3 -->
+            <div class="post">
+
+                <h3>
+                    Conheça o Canal Brazzante 🔥
+                </h3>
+
+                <p>
+                    Se você sente saudade da época de ouro da internet, dos jogos clássicos e da nostalgia dos anos 2000, o canal <strong>Brazzante</strong> foi feito para você.
+                </p>
+                <br>
+                <p>
+                    No canal você encontra conteúdos sobre:
+                </p>
+                <br>
+                <ul>
+                    <li>🕹️ Jogos que marcaram gerações</li>
+                    <br>
+                    <li>🌐 A história do início da internet</li>
+                    <br>
+                    <li>💾 MMORPGs clássicos e games esquecidos</li>
+                    <br>
+                    <li>📺 Documentários nostálgicos</li>
+                    <br>
+                    <li>🎧 Cultura gamer dos anos 2000</li>
+                    <br>
+                    <li>👾 Curiosidades e histórias marcantes da era online</li>
+                </ul>
+
+                <p>
+                    Os vídeos do Brazzante relembram uma época em que a internet era mais simples, os jogos tinham comunidades inesquecíveis e cada lançamento criava memórias únicas.
+                </p>
+                <br>
+                <p>
+                    Se você viveu a era de jogos como Habbo Hotel, Club Penguin e MMORPGs clássicos, provavelmente vai se sentir em casa por lá.
+                </p>
+                <br>
+                <p>
+                    📌 Inscreva-se no canal e venha reviver a nostalgia da internet e dos games que marcaram uma geração.
+                </p>
+
+                <a 
+                href="https://www.youtube.com/@obrazzante" 
+                target="_blank" 
+                class="botao-saiba-mais">
+                    Saiba Mais
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CARROSSEL DE VÍDEOS YOUTUBE -->
+
+<section class="banner-slider">
+
+    <div class="container">
+
+    <div class="video-track" id="video-track">
+
+        <!-- VIDEO 1 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/p1VMBzVuHOo"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 2 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/_gdn6rr7bJE"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 3 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/t6JBPYiQgrc"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 4 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/8eXFycqAeBg"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 5 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/dw9AZPj95B4"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 6 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/8OH6EiEt3KE"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+                <!-- VIDEO 1 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/p1VMBzVuHOo"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 2 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/_gdn6rr7bJE"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 3 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/t6JBPYiQgrc"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 4 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/8eXFycqAeBg"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 5 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/dw9AZPj95B4"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- VIDEO 6 -->
+        <div class="video-slide">
+
+            <iframe
+                src="https://www.youtube.com/embed/8OH6EiEt3KE"
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante" target="_blank">
+
+    <img 
+    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+    width="18">
+
+    Instagram
+
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2" target="_blank">
+
+    <img 
+    src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+    width="18">
+
+    YouTube
+
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/" target="_blank">
+
+    <img 
+    src="https://cdn-icons-png.flaticon.com/512/3670/3670382.png"
+    width="18">
+
+    Steam
+
+</a>
+
+<a href="http://web.whatsapp.com/" target="_blank">
+
+    <img 
+    src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+    width="18">
+
+    Suporte
+
+</a>
+
+</div>
+
+</footer>
+
+<!-- POPUP -->
+
+<div id="popup">
+
+<button class="popup-seta esquerda-popup"
+onclick="popupAnterior()">
+❮
+</button>
+
+<img id="popup-img">
+
+<button class="popup-seta direita-popup"
+onclick="popupProximo()">
+❯
+</button>
+
+<button id="fechar-popup"
+onclick="fecharPopup()">
+Fechar
+</button>
+
+</div>
+
+<!-- SCRIPT -->
+
+<script>
+
+/* CARROSSEL PRODUTOS */
+
+function trocarImagem(botao,direcao){
+
+const container = botao.closest('.produto');
+
+const imagem = container.querySelector('.carrossel-img');
+
+const imagens = JSON.parse(imagem.dataset.imagens);
+
+let index = parseInt(imagem.dataset.index);
+
+index += direcao;
+
+if(index < 0){
+index = imagens.length - 1;
+}
+
+if(index >= imagens.length){
+index = 0;
+}
+
+imagem.src = imagens[index];
+
+imagem.dataset.index = index;
+
+}
+
+/* =========================
+POPUP COM CARROSSEL
+========================= */
+
+let popupImagens = [];
+let popupIndex = 0;
+
+function abrirPopup(imagem){
+
+popupImagens = JSON.parse(imagem.dataset.imagens);
+
+popupIndex = parseInt(imagem.dataset.index);
+
+document.getElementById("popup").style.display = "flex";
+
+atualizarPopup();
+
+}
+
+function atualizarPopup(){
+
+document.getElementById("popup-img").src =
+popupImagens[popupIndex];
+
+}
+
+function popupProximo(){
+
+popupIndex++;
+
+if(popupIndex >= popupImagens.length){
+
+popupIndex = 0;
+
+}
+
+atualizarPopup();
+
+}
+
+function popupAnterior(){
+
+popupIndex--;
+
+if(popupIndex < 0){
+
+popupIndex = popupImagens.length - 1;
+
+}
+
+atualizarPopup();
+
+}
+
+function fecharPopup(){
+
+document.getElementById("popup").style.display = "none";
+
+}
+
+/* PARTÍCULAS ANIMADAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula = document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left = Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+/* BANNERS */
+
+const banners = [
+
+{
+img:"imagens/banner1.png",
+link:"https://shopee.com.br/tick3d?categoryId=100644"
+},
+
+{
+img:"imagens/banner4.png",
+link:"https://store.steampowered.com/app/4305620/Brazzante/"
+},
+
+{
+img:"imagens/banner5.png",
+link:"https://link3.com"
+}
+
+];
+
+let bannerAtual = 0;
+
+function mostrarBanner(){
+
+document.getElementById("banner-img").src =
+banners[bannerAtual].img;
+
+document.getElementById("banner-link").href =
+banners[bannerAtual].link;
+
+}
+
+function proximoBanner(){
+
+bannerAtual++;
+
+if(bannerAtual >= banners.length){
+
+bannerAtual = 0;
+}
+
+mostrarBanner();
+
+}
+
+function anteriorBanner(){
+
+bannerAtual--;
+
+if(bannerAtual < 0){
+
+bannerAtual = banners.length - 1;
+}
+
+mostrarBanner();
+
+}
+
+function trocarBanner(index){
+
+bannerAtual = index;
+
+mostrarBanner();
+
+}
+
+/* AUTO */
+
+setInterval(proximoBanner,4000);
+
+
+
+/* ESPERA 10 SEGUNDOS */
+
+setTimeout(function(){
+
+    document.getElementById("popupLateral").style.display = "block";
+
+}, 10000);
+
+
+/* FECHAR POPUP */
+
+function fecharPopup(){
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
+function fecharPopupLateral(){
+
+    document.getElementById("popupLateral").style.display = "none";
+
+}
+
+</script>
+
+<!-- POPUP LATERAL -->
+
+<div class="popup-lateral" id="popupLateral">
+
+    <!-- BOTÃO FECHAR -->
+    <span class="fechar-popup" onclick="fecharPopupLateral()">
+        &times;
+    </span>
+
+    <div class="popup-texto">
+
+        <h3>
+            Encomendas Personalizadas 🖨️
+        </h3>
+
+        <p>
+            Produzimos peças personalizadas em impressão 3D para setups, decoração e projetos exclusivos.
+        </p>
+
+        <a 
+        href="https://wa.me/5519989087008?text=Olá.%20Quero%20fazer%20uma%20encomenda%20com%20vocês.%20Como%20funciona?"
+        target="_blank"
+        class="botao-popup">
+            Fazer Encomenda
+        </a>
+
+    </div>
+
+</div>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a
+href="https://wa.me/5519989087008?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20😊"
+class="whatsapp-float"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+alt="WhatsApp">
+
+</a>
+
+<script>
+
+function fecharPopupPrincipal(){
+
+    document
+    .getElementById("popupManutencao")
+    .style.display = "none";
+
+}
+
+</script>
+</body>
+</html>
