@@ -1,0 +1,659 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do Club Penguin
+</title>
+
+<meta name="description"
+content="A história completa do Club Penguin, desde o Penguin Chat até o auge, compra pela Disney e encerramento definitivo do jogo.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* PARTÍCULAS */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* ARTIGO */
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* VIDEO */
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ARTIGO -->
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/x6qhLQLeAe8"
+title="Club Penguin"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+A História do Club Penguin
+</h1>
+
+<p>
+Club Penguin foi um dos maiores fenômenos da internet nos anos 2000, marcando milhões de jogadores ao redor do mundo com festas temáticas, minigames, segredos e uma das comunidades mais nostálgicas da história dos jogos online.
+</p>
+
+<p>
+Mas antes de se tornar um sucesso mundial comprado pela Disney, o jogo começou como um pequeno experimento multiplayer criado por um programador independente.
+</p>
+
+<h2>
+O Surgimento do Penguin Chat
+</h2>
+
+<p>
+Tudo começou quando Lance Priebe, fundador da Rocketsnail Games, criou um pequeno experimento chamado Experimental Penguins.
+</p>
+
+<p>
+A ideia original era testar sistemas multiplayer em Flash, algo extremamente inovador no início dos anos 2000.
+</p>
+
+<p>
+O jogo funcionava como uma sala de bate-papo online onde os usuários controlavam pequenos pinguins em um cenário completamente branco representando a neve.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (1).webp"
+alt="Penguin Chat"
+loading="lazy">
+
+<p>
+Meses depois, o projeto evoluiu para Penguin Chat, trazendo mais opções de customização, novos mapas e interações sociais.
+</p>
+
+<p>
+Mesmo extremamente simples, o jogo começou a ganhar milhares de visitantes mensais.
+</p>
+
+<h2>
+A Evolução do Projeto
+</h2>
+
+<p>
+Em 2003 surgiu o Penguin Chat 2, uma versão muito mais próxima do que viria a ser o Club Penguin.
+</p>
+
+<p>
+Agora existiam contas registradas, animações melhores, balões de fala, emojis, bolas de neve e mais mapas conectados entre si.
+</p>
+
+<p>
+Os jogadores podiam explorar áreas diferentes apenas caminhando pela tela, criando uma sensação muito maior de mundo aberto.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (2).webp"
+alt="Penguin Chat 2"
+loading="lazy">
+
+<p>
+Foi também nessa época que surgiram alguns dos primeiros segredos do jogo, incluindo o famoso traje ninja escondido no menu.
+</p>
+
+<p>
+Esse pequeno easter egg se tornaria uma das maiores lendas da comunidade por anos.
+</p>
+
+<h2>
+O Nascimento do Club Penguin
+</h2>
+
+<p>
+Em 2005, a Rocketsnail finalmente lançou o beta de Club Penguin.
+</p>
+
+<p>
+A ideia era criar um mundo virtual seguro para crianças, com forte foco em interação social e eventos online.
+</p>
+
+<p>
+Durante os testes, foi criada a primeira Beta Party para testar os servidores do jogo.
+</p>
+
+<p>
+Os jogadores que participaram receberam chapéus exclusivos, iniciando uma tradição que se tornaria extremamente importante na comunidade.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (3).webp"
+alt="Club Penguin Beta"
+loading="lazy">
+
+<p>
+O jogo foi oficialmente lançado em outubro de 2005 e rapidamente explodiu em popularidade.
+</p>
+
+<p>
+Novas áreas começaram a surgir constantemente, incluindo:
+</p>
+
+<p>
+• Cafeteria<br>
+• Discoteca<br>
+• Forte Nevado<br>
+• Plaza<br>
+• Praia<br>
+• Minas<br>
+• Iceberg
+</p>
+
+<h2>
+A Explosão Mundial
+</h2>
+
+<p>
+Em 2006, uma parceria com o portal Miniclip ajudou Club Penguin a alcançar milhões de novos jogadores.
+</p>
+
+<p>
+Os servidores começaram a lotar diariamente e a equipe precisou crescer rapidamente para acompanhar o sucesso.
+</p>
+
+<p>
+Em 2007, o jogo já possuía mais de 12 milhões de jogadores ativos.
+</p>
+
+<p>
+Foi então que a Disney adquiriu o jogo por impressionantes 350 milhões de dólares.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (4).webp"
+alt="Club Penguin Disney"
+loading="lazy">
+
+<p>
+Mesmo após a compra, a equipe original permaneceu trabalhando no projeto durante os primeiros anos.
+</p>
+
+<h2>
+O Auge do Club Penguin
+</h2>
+
+<p>
+Entre 2008 e 2012, Club Penguin viveu seu auge absoluto.
+</p>
+
+<p>
+O jogo recebeu sistemas como:
+</p>
+
+<p>
+• Card-Jitsu<br>
+• Agente Secreto<br>
+• Puffles<br>
+• Eventos temáticos<br>
+• Festas gigantescas<br>
+• Missões especiais
+</p>
+
+<p>
+Além disso, a Disney investiu pesado em produtos físicos da marca.
+</p>
+
+<p>
+Foram lançados brinquedos, pelúcias, revistas, jogos de cartas, álbuns de figurinhas e até jogos para Nintendo DS e Wii.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (5).webp"
+alt="Card Jitsu"
+loading="lazy">
+
+<p>
+Na mesma época, o jogo ultrapassou 300 milhões de contas registradas ao redor do mundo.
+</p>
+
+<h2>
+O Declínio
+</h2>
+
+<p>
+Com o passar dos anos, muitos jogadores começaram a reclamar que o jogo estava se tornando apenas uma ferramenta de marketing da Disney.
+</p>
+
+<p>
+Eventos passaram a focar fortemente em divulgar filmes e franquias da empresa, como Frozen, Star Wars e Universidade Monstros.
+</p>
+
+<p>
+Ao mesmo tempo, o mercado mobile crescia rapidamente, reduzindo o interesse pelos jogos em Flash no navegador.
+</p>
+
+<p>
+Além disso, Roblox e Minecraft começaram a dominar o público jovem com experiências muito mais abertas e criativas.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (6).webp"
+alt="Club Penguin Declínio"
+loading="lazy">
+
+<h2>
+O Fim do Club Penguin
+</h2>
+
+<p>
+Em 2017, a Disney anunciou oficialmente o encerramento do Club Penguin clássico.
+</p>
+
+<p>
+Na mesma época foi lançado Club Penguin Island, uma nova versão totalmente em 3D para dispositivos móveis.
+</p>
+
+<p>
+Entretanto, o novo jogo foi extremamente criticado pela comunidade.
+</p>
+
+<p>
+Muitos jogadores consideravam o jogo vazio, genérico e sem o mesmo charme da versão clássica.
+</p>
+
+<p>
+Sem conseguir repetir o sucesso do original, Club Penguin Island acabou sendo encerrado em 2018.
+</p>
+
+<h2>
+Os Servidores Privados
+</h2>
+
+<p>
+Após o encerramento oficial, vários servidores privados surgiram tentando recriar a experiência clássica do jogo.
+</p>
+
+<p>
+Projetos como Club Penguin Rewritten chegaram a alcançar milhões de jogadores durante a pandemia.
+</p>
+
+<p>
+Entretanto, diversos desses servidores enfrentaram problemas legais com a Disney e até denúncias envolvendo segurança da comunidade.
+</p>
+
+<img
+src="documentarios/clubpenguin/exemplo (7).webp"
+alt="Club Penguin Rewritten"
+loading="lazy">
+
+<h2>
+O Legado do Jogo
+</h2>
+
+<p>
+Mesmo anos após seu encerramento, Club Penguin continua sendo lembrado como um dos jogos online mais importantes da história da internet.
+</p>
+
+<p>
+Seu foco em comunidade, eventos e interação social ajudou a definir toda uma geração de jogos multiplayer infantis.
+</p>
+
+<p>
+Para milhões de jogadores, Club Penguin não foi apenas um jogo, mas uma das experiências mais marcantes da infância na internet.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+/* PARTÍCULAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

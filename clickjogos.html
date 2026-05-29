@@ -1,0 +1,633 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do Click Jogos
+</title>
+
+<meta name="description"
+content="A história completa do Click Jogos, o maior portal de jogos de navegador do Brasil que marcou milhões de crianças e adolescentes nos anos 2000.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/iMQRE6_3oI8"
+title="Click Jogos"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+A História do Click Jogos
+</h1>
+
+<p>
+Click Jogos foi o maior portal de jogos de navegador do Brasil e marcou profundamente toda uma geração de crianças e adolescentes nos anos 2000.
+</p>
+
+<p>
+Durante anos, o site virou praticamente parada obrigatória para quem queria matar tempo na escola, em lan houses ou durante madrugadas inteiras procurando jogos aleatórios na internet.
+</p>
+
+<p>
+Mas o que muita gente não sabe é que o portal começou como um simples projeto criado por um adolescente brasileiro apaixonado por programação.
+</p>
+
+<h2>
+O Surgimento do Click Jogos
+</h2>
+
+<p>
+Tudo começou em 2002, quando Andreas Diegues sofreu uma fratura no pé enquanto andava de skate.
+</p>
+
+<p>
+Durante o período de recuperação em casa, ele começou a aprender HTML, JavaScript e CSS por conta própria.
+</p>
+
+<p>
+Pouco tempo depois, já realizava pequenos trabalhos freelance envolvendo programação e desenvolvimento web.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (1).webp"
+alt="Click Jogos Antigo"
+loading="lazy">
+
+<p>
+Em 2004, aos apenas 15 anos, Andreas teve a ideia de reunir jogos de várias partes do mundo em um único portal.
+</p>
+
+<p>
+Foi então que nasceu oficialmente o Click Jogos.
+</p>
+
+<h2>
+O Crescimento do Portal
+</h2>
+
+<p>
+O site começou a crescer extremamente rápido.
+</p>
+
+<p>
+Novos jogos eram adicionados diariamente e a audiência aumentava constantemente.
+</p>
+
+<p>
+Com isso, Andreas precisou chamar um amigo da escola para ajudar a encontrar e adicionar novos jogos ao portal.
+</p>
+
+<p>
+Na época, o amigo recebia cerca de R$ 80 por mês pelo trabalho, algo considerado excelente para adolescentes nos anos 2000.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (2).webp"
+alt="Portal Click Jogos"
+loading="lazy">
+
+<p>
+A mãe de Andreas também teve papel fundamental no início da empresa, ajudando no gerenciamento financeiro e nas questões legais.
+</p>
+
+<h2>
+A Vida Entre Escola e Programação
+</h2>
+
+<p>
+Durante vários anos, Andreas precisou conciliar os estudos com a administração do portal.
+</p>
+
+<p>
+Muitas vezes ele trabalhava durante a madrugada fazendo manutenção nos servidores do site e acordava cedo para ir à escola.
+</p>
+
+<p>
+As faltas acabaram se tornando frequentes e a direção chegou a chamar sua mãe para conversar sobre a situação.
+</p>
+
+<p>
+Mesmo assim, ele conseguiu concluir os estudos enquanto o Click Jogos continuava crescendo absurdamente.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (3).webp"
+alt="Jogos Flash"
+loading="lazy">
+
+<h2>
+A Explosão de Popularidade
+</h2>
+
+<p>
+Entre 2005 e 2009, o Click Jogos viveu um crescimento gigantesco.
+</p>
+
+<p>
+Em 2007, o portal firmou parceria com o UOL Jogos, aumentando ainda mais sua visibilidade no Brasil.
+</p>
+
+<p>
+Pouco tempo depois, o site começou a contratar funcionários e expandir sua estrutura.
+</p>
+
+<p>
+Em 2011, a equipe já havia crescido de 6 para 45 funcionários.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (4).webp"
+alt="Click Jogos UOL"
+loading="lazy">
+
+<p>
+O portal adicionava cerca de 10 novos jogos diariamente.
+</p>
+
+<p>
+Além disso, investiu mais de R$ 1,2 milhão em marketing para ampliar ainda mais sua presença na internet brasileira.
+</p>
+
+<h2>
+O Auge do Click Jogos
+</h2>
+
+<p>
+Em 2014, o Click Jogos atingiu seu auge absoluto.
+</p>
+
+<p>
+Segundo reportagens da época, o portal possuía cerca de 15 milhões de visitantes mensais.
+</p>
+
+<p>
+Grande parte da receita vinha de:
+</p>
+
+<p>
+• Banners publicitários<br>
+• Anúncios em vídeo<br>
+• Jogos patrocinados<br>
+• Parcerias comerciais
+</p>
+
+<p>
+O site possuía mais de 20 mil jogos em seu catálogo.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (5).webp"
+alt="Auge Click Jogos"
+loading="lazy">
+
+<p>
+Nessa mesma época, o Click Jogos acabou realizando uma fusão com o grupo NZN, responsável por sites como:
+</p>
+
+<p>
+• Baixaki<br>
+• TecMundo<br>
+• Mega Curioso
+</p>
+
+<h2>
+A Era Mobile e a Morte do Flash
+</h2>
+
+<p>
+Com o crescimento dos smartphones, o portal começou a investir em sua versão mobile.
+</p>
+
+<p>
+Entretanto, em 2017 surgiu um dos maiores problemas da história do site:
+</p>
+
+<p>
+O encerramento do Adobe Flash Player.
+</p>
+
+<p>
+Grande parte dos jogos clássicos do portal dependia completamente da tecnologia Flash para funcionar.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (6).webp"
+alt="Fim do Flash"
+loading="lazy">
+
+<p>
+Mesmo adicionando jogos em HTML5, muitos usuários começaram a reclamar da perda dos jogos clássicos e do excesso de propagandas dentro do portal.
+</p>
+
+<h2>
+A Reformulação do Site
+</h2>
+
+<p>
+Em 2022, o Click Jogos recebeu uma reformulação completa.
+</p>
+
+<p>
+O portal passou a focar fortemente em jogos HTML5 modernos e em integrações com serviços externos.
+</p>
+
+<p>
+O layout foi completamente atualizado para a versão utilizada atualmente.
+</p>
+
+<p>
+Entretanto, muitos jogadores antigos sentiram falta da identidade clássica da época do Flash Player.
+</p>
+
+<img
+src="documentarios/clickjogos/exemplo (7).webp"
+alt="Click Jogos Atual"
+loading="lazy">
+
+<h2>
+O Estado Atual do Portal
+</h2>
+
+<p>
+Em 2025, o grupo NZN foi adquirido pelo Estadão, passando a controlar todos os portais da empresa.
+</p>
+
+<p>
+Atualmente, o Click Jogos possui uma média muito menor de acessos em comparação ao auge da década passada.
+</p>
+
+<p>
+Enquanto em 2014 o site ultrapassava 15 milhões de acessos mensais, hoje os números giram entre 300 e 500 mil visitas mensais.
+</p>
+
+<h2>
+O Legado do Click Jogos
+</h2>
+
+<p>
+Mesmo após tantos anos, o Click Jogos continua sendo um dos maiores símbolos da internet brasileira dos anos 2000.
+</p>
+
+<p>
+O portal marcou profundamente a infância de milhões de pessoas e ajudou a popularizar os jogos de navegador no Brasil.
+</p>
+
+<p>
+Para muita gente, o Click Jogos não era apenas um site, mas parte da rotina diária da internet durante uma das épocas mais nostálgicas da web brasileira.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

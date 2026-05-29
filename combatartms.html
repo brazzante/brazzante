@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do Combat Arms
+</title>
+
+<meta name="description"
+content="A história completa do Combat Arms, o FPS que dominou as lan houses brasileiras e acabou destruído por hacks e microtransações abusivas.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/3O59SuuLIyE"
+title="Combat Arms"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+A História do Combat Arms
+</h1>
+
+<p>
+Combat Arms foi um dos FPS mais marcantes da era das lan houses brasileiras.
+</p>
+
+<p>
+O jogo se tornou símbolo de corujões, clãs competitivos, guerras entre amigos e madrugadas inteiras tentando subir patente.
+</p>
+
+<p>
+Mas ao mesmo tempo em que conquistou milhões de jogadores, também ficou conhecido por hacks, decisões predatórias e problemas de administração que acabaram destruindo boa parte da comunidade.
+</p>
+
+<h2>
+O Surgimento da Nexon
+</h2>
+
+<p>
+Combat Arms foi desenvolvido pela Doobic Game Studio e publicado pela Nexon, uma das maiores empresas de jogos online da Coreia do Sul.
+</p>
+
+<p>
+Muito antes de Combat Arms existir, a Nexon já era considerada pioneira no mercado de MMORPGs online.
+</p>
+
+<p>
+A empresa publicou jogos extremamente importantes para a indústria, incluindo:
+</p>
+
+<p>
+• The Kingdom of the Winds (1996)<br>
+• Dark Ages (1998)<br>
+• MapleStory
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (1).webp"
+alt="Nexon"
+loading="lazy">
+
+<p>
+Na época em que internet rápida ainda era luxo e computadores gamers eram raros, a Nexon já apostava fortemente em jogos multiplayer online.
+</p>
+
+<h2>
+O Nascimento do Combat Arms
+</h2>
+
+<p>
+Em 2008, a empresa decidiu entrar na disputa dos jogos FPS online.
+</p>
+
+<p>
+O sucesso absurdo de Counter-Strike 1.6 havia mostrado que existia um enorme mercado para shooters competitivos.
+</p>
+
+<p>
+Foi então que nasceu Combat Arms.
+</p>
+
+<p>
+O jogo utilizava a engine Lithtech Jupiter, a mesma usada em títulos como F.E.A.R.
+</p>
+
+<p>
+Além de relativamente bonita para a época, a engine também era extremamente leve para computadores mais simples.
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (2).webp"
+alt="Combat Arms Antigo"
+loading="lazy">
+
+<p>
+Isso ajudou muito o jogo a explodir nas lan houses ao redor do mundo.
+</p>
+
+<h2>
+A Chegada ao Brasil
+</h2>
+
+<p>
+Combat Arms chegou oficialmente ao Brasil em 2010 através da publisher Level Up.
+</p>
+
+<p>
+A empresa fez um trabalho extremamente forte de divulgação do jogo.
+</p>
+
+<p>
+Combat Arms apareceu em:
+</p>
+
+<p>
+• Revistas de jogos<br>
+• Eventos como BGS e Anime Friends<br>
+• CDs de instalação da Level Up<br>
+• Propagandas online
+</p>
+
+<p>
+O resultado foi imediato.
+</p>
+
+<p>
+O jogo rapidamente começou a competir diretamente com títulos como CrossFire e Point Blank.
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (3).webp"
+alt="Combat Arms Brasil"
+loading="lazy">
+
+<h2>
+O Que Tornava Combat Arms Especial
+</h2>
+
+<p>
+Combat Arms ficou extremamente popular por oferecer uma enorme quantidade de conteúdo.
+</p>
+
+<p>
+O sistema de patentes era um dos maiores incentivos do jogo.
+</p>
+
+<p>
+Os jogadores podiam evoluir até General, algo que exigia milhões de pontos de experiência.
+</p>
+
+<p>
+Além disso, o jogo tinha:
+</p>
+
+<p>
+• Sistema de clãs<br>
+• Combat Wars (CW)<br>
+• Mapas extremamente variados<br>
+• Centenas de armas<br>
+• Modificação de equipamentos<br>
+• Personagens customizáveis
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (4).webp"
+alt="Patentes Combat Arms"
+loading="lazy">
+
+<p>
+As armas também podiam receber miras, silenciadores, acessórios e skins extremamente chamativas.
+</p>
+
+<h2>
+Os Modos Mais Famosos
+</h2>
+
+<p>
+Combat Arms oferecia uma variedade absurda de modos de jogo.
+</p>
+
+<p>
+Entre os mais famosos estavam:
+</p>
+
+<p>
+• Procurar e Destruir<br>
+• Mata-Mata<br>
+• Fireteam<br>
+• Escolta Armada<br>
+• Elimination Pro
+</p>
+
+<p>
+Mas nenhum deles foi tão popular quanto o lendário modo Quarentena.
+</p>
+
+<p>
+Nesse modo, os jogadores precisavam sobreviver contra infectados enquanto o mapa virava um verdadeiro caos.
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (5).webp"
+alt="Modo Quarentena"
+loading="lazy">
+
+<p>
+Também existiam salas personalizadas criadas pela própria comunidade:
+</p>
+
+<p>
+• Só faca<br>
+• Só granada<br>
+• Só pistola<br>
+• Só lança-foguete
+</p>
+
+<h2>
+O Início da Crise
+</h2>
+
+<p>
+Em 2011, o Combat Arms Brasil alcançou mais de 21 mil jogadores simultâneos.
+</p>
+
+<p>
+Mas pouco tempo depois começaram os problemas.
+</p>
+
+<p>
+A Doobic Studio declarou falência em 2013, fazendo a Nexon assumir completamente os direitos do jogo.
+</p>
+
+<p>
+Foi nesse momento que as microtransações começaram a sair do controle.
+</p>
+
+<p>
+Armas premium passaram a causar mais dano, dar mais velocidade e oferecer vantagens absurdas.
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (6).webp"
+alt="Pay To Win"
+loading="lazy">
+
+<p>
+A diferença entre jogadores gratuitos e usuários que gastavam dinheiro começou a ficar gigantesca.
+</p>
+
+<h2>
+Hackers e Especialistas
+</h2>
+
+<p>
+Outro problema gigantesco foi a epidemia de hackers.
+</p>
+
+<p>
+Cheats famosos começaram a dominar praticamente todas as salas:
+</p>
+
+<p>
+• Wallhack<br>
+• Speed Hack<br>
+• No Recoil<br>
+• Ghost Mode<br>
+• Aimbot
+</p>
+
+<p>
+Ao mesmo tempo, o jogo lançou os chamados Especialistas, personagens com habilidades exclusivas como:
+</p>
+
+<p>
+• Miniguns<br>
+• Minas terrestres<br>
+• Torres automáticas<br>
+• Kits médicos
+</p>
+
+<p>
+Boa parte da comunidade passou a considerar o jogo completamente desbalanceado.
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (7).webp"
+alt="Hackers Combat Arms"
+loading="lazy">
+
+<h2>
+A Era Valofe
+</h2>
+
+<p>
+Em 2017, a Nexon vendeu os direitos de Combat Arms para a Valofe.
+</p>
+
+<p>
+A empresa era conhecida por administrar jogos online antigos e tentar mantê-los vivos através de relançamentos.
+</p>
+
+<p>
+Em 2018 surgiu Combat Arms Reloaded, trazendo gráficos melhores e sistemas atualizados.
+</p>
+
+<p>
+Depois, em 2020, lançaram Combat Arms Classic, tentando recuperar a nostalgia da versão original.
+</p>
+
+<p>
+Entretanto, os problemas de hacks e monetização continuaram existindo.
+</p>
+
+<img
+src="documentarios/combatarms/exemplo (8).webp"
+alt="Nexon"
+loading="lazy">
+
+<h2>
+O Estado Atual do Jogo
+</h2>
+
+<p>
+Atualmente, Combat Arms possui servidores praticamente vazios.
+</p>
+
+<p>
+A comunidade ainda reclama constantemente da presença de hackers e da falta de suporte eficiente.
+</p>
+
+<p>
+Mesmo assim, muitos jogadores continuam lembrando do jogo com carinho por causa das experiências vividas nas lan houses e nos tempos de ouro do FPS online.
+</p>
+
+<p>
+Para muita gente, Combat Arms foi mais do que um jogo de tiro: foi uma das maiores febres da internet brasileira nos anos 2000.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

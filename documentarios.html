@@ -1,0 +1,1294 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Documentários - Brazzante
+</title>
+
+<meta name="description"
+content="Documentários nostálgicos sobre MMORPGs, internet antiga, jogos clássicos e cultura gamer.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* CONTAINER */
+
+.container{
+    width:100%;
+    max-width:1300px;
+    margin:0 auto;
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* FUNDO ANIMADO */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* TÍTULO */
+
+.documentarios{
+    padding:80px 20px;
+}
+
+.titulo-secao{
+    text-align:center;
+    font-size:44px;
+    color:#c30000;
+    margin-bottom:60px;
+}
+
+/* GRID */
+
+.grid-documentarios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+    gap:35px;
+}
+
+/* CARD */
+
+.card-documentario{
+    background:#1a1a1a;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    transition:0.3s;
+}
+
+.card-documentario:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGEM */
+
+.card-documentario img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    display:block;
+}
+
+/* CONTEÚDO */
+
+.card-conteudo{
+    padding:25px;
+}
+
+.card-conteudo h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#c30000;
+}
+
+.card-conteudo p{
+    line-height:1.8;
+    color:#d8d8d8;
+    margin-bottom:25px;
+}
+
+/* BOTÃO */
+
+.btn-vermais{
+    display:inline-block;
+    padding:14px 24px;
+    background:#940000;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-vermais:hover{
+    background:#c00000;
+    transform:scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:60px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    color:#380000;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:70px;
+
+height:70px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.35);
+
+z-index:9999;
+
+transition:0.3s;
+
+animation:flutuarWhatsapp 2s infinite ease-in-out;
+
+}
+
+.whatsapp-float:hover{
+transform:scale(1.12);
+}
+
+.whatsapp-float img{
+width:38px;
+height:38px;
+}
+
+@keyframes flutuarWhatsapp{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .titulo-secao{
+        font-size:32px;
+    }
+
+    .grid-documentarios{
+        grid-template-columns:1fr;
+    }
+
+    .card-conteudo h2{
+        font-size:24px;
+    }
+
+    .whatsapp-float{
+        width:60px;
+        height:60px;
+        bottom:20px;
+        right:20px;
+    }
+
+    .whatsapp-float img{
+        width:32px;
+        height:32px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- DOCUMENTÁRIOS -->
+
+<section class="documentarios">
+
+<div class="container">
+
+<h1 class="titulo-secao">
+Documentários & Artigos
+</h1>
+
+<div class="grid-documentarios">
+
+<!-- CARD 0 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/clickjogos.webp"
+alt="Colheita Feliz">
+
+<div class="card-conteudo">
+
+<h2>
+A Queda do Click Jogos
+</h2>
+
+<p>
+A história do lendário site brasileiro, responsável pela diversão de mais de 15 milhões de crianças e pré adolescentes da época.
+</p>
+
+<a
+href="clickjogos.html"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 1 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/colheita feliz.webp"
+alt="Colheita Feliz">
+
+<div class="card-conteudo">
+
+<h2>
+O Fenômeno Colheita Feliz
+</h2>
+
+<p>
+Como um simples jogo de fazenda do Orkut se tornou um dos maiores vícios da internet brasileira nos anos 2000.
+</p>
+
+<a
+href="colheitafeliz.html"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/club penguin.webp"
+alt="Club Penguin">
+
+<div class="card-conteudo">
+
+<h2>
+O Auge do Club Penguin
+</h2>
+
+<p>
+A ascensão do maior fenômeno infantil da internet durante os anos 2000 e sua comunidade inesquecível.
+</p>
+
+<a
+href="clubpenguin.html"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/habbo.webp"
+alt="Habbo Hotel">
+
+<div class="card-conteudo">
+
+<h2>
+Os Mistérios do Habbo Hotel
+</h2>
+
+<p>
+Golpes, lendas urbanas, quartos famosos e a história do jogo social mais icônico da internet brasileira.
+</p>
+
+<a
+href="habbohotel.html"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/combat arms.webp"
+alt="Combat Arms">
+
+<div class="card-conteudo">
+
+<h2>
+A Era de Ouro do Combat Arms
+</h2>
+
+<p>
+Como Combat Arms se tornou um dos FPS online mais populares das lan houses brasileiras durante os anos 2000.
+</p>
+
+<a
+href="combatartms.html"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/conquer online.webp"
+alt="Conquer Online">
+
+<div class="card-conteudo">
+
+<h2>
+O Mundo de Conquer Online
+</h2>
+
+<p>
+Como Conquer Online conquistou milhares de jogadores com PvP intenso, guerras entre guildas e uma economia viciante durante os anos 2000.
+</p>
+
+<a
+href="conqueronline.html"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/crossfire.webp"
+alt="CrossFire">
+
+<div class="card-conteudo">
+
+<h2>
+A Febre de CrossFire
+</h2>
+
+<p>
+Como CrossFire dominou as lan houses brasileiras com partidas competitivas, clãs lendários e milhões de jogadores online.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=PkMD3VkSgio"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 7 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/ddtank.webp"
+alt="DDTank">
+
+<div class="card-conteudo">
+
+<h2>
+A Era de Ouro do DDTank
+</h2>
+
+<p>
+Como DDTank conquistou milhões de jogadores com batalhas estratégicas, visuais caricatos e partidas inesquecíveis.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=MLgJXf3m-bo"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 8 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/diablo1.webp"
+alt="Diablo 1">
+
+<div class="card-conteudo">
+
+<h2>
+O Legado Sombrio de Diablo 1
+</h2>
+
+<p>
+Como Diablo revolucionou os RPGs de ação com sua atmosfera obscura, loot viciante e multiplayer marcante.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=vpBLzRvA1Og"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 9 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/digerati.webp"
+alt="Revistas Digerati">
+
+<div class="card-conteudo">
+
+<h2>
+A Era das Revistas Digerati
+</h2>
+
+<p>
+Como as revistas da Digerati marcaram a infância de milhares de brasileiros com CDs de jogos, detonados e programas incríveis.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=t6JBPYiQgrc"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 10 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/grand chase.webp"
+alt="Grand Chase">
+
+<div class="card-conteudo">
+
+<h2>
+O Fenômeno Grand Chase
+</h2>
+
+<p>
+Como Grand Chase se tornou um dos jogos online mais amados das lan houses brasileiras com personagens marcantes e PvP viciante.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=rIAM9LbDTwo"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 11 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/guitar flash.webp"
+alt="Guitar Flash">
+
+<div class="card-conteudo">
+
+<h2>
+O Sucesso de Guitar Flash
+</h2>
+
+<p>
+Como Guitar Flash virou febre no Orkut entre brasileiros e marcou uma geração apaixonada por música e jogos de ritmo.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=8eXFycqAeBg"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 12 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/gunz.webp"
+alt="Gunz The Duel">
+
+<div class="card-conteudo">
+
+<h2>
+A Lenda de GunZ: The Duel
+</h2>
+
+<p>
+Como GunZ revolucionou os jogos de tiro online com movimentação absurda, combate frenético e técnicas avançadas como o K-Style.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=iJm6ABKINtQ"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 14 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/MU ONLINE.webp"
+alt="MU Online">
+
+<div class="card-conteudo">
+
+<h2>
+A Era de Ouro de MU Online
+</h2>
+
+<p>
+Como MU Online se tornou um dos MMORPGs mais viciantes das lan houses com resets infinitos, PvP intenso e servidores lendários.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=3Y8yDsKkY1g"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 15 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/Cereais.webp"
+alt="Jogos de Cereais da Nestlé">
+
+<div class="card-conteudo">
+
+<h2>
+Os Jogos que Vinham nos Cereais
+</h2>
+
+<p>
+Como os brindes da Nestlé marcaram uma geração com CDs cheios de jogos clássicos, demos e aventuras inesquecíveis.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=dw9AZPj95B4"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 16 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/outlive.webp"
+alt="Outlive">
+
+<div class="card-conteudo">
+
+<h2>
+O RTS Brasileiro Outlive
+</h2>
+
+<p>
+Como Outlive se tornou um dos jogos brasileiros mais ambiciosos dos anos 90 e marcou fãs de estratégia em tempo real.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=Bb2DMEPBPe4"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 17 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/perfect world.webp"
+alt="Perfect World">
+
+<div class="card-conteudo">
+
+<h2>
+O Universo de Perfect World
+</h2>
+
+<p>
+Como Perfect World encantou milhares de jogadores com seu mundo gigantesco, voo livre e guerras épicas entre guildas.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=8OH6EiEt3KE"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 18 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/point blank.webp"
+alt="Point Blank">
+
+<div class="card-conteudo">
+
+<h2>
+A Febre de Point Blank
+</h2>
+
+<p>
+Como Point Blank dominou as lan houses brasileiras com partidas competitivas, clãs lendários e campeonatos intensos.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=7UYbbSg8PUA"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 19 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/card game.webp"
+alt="Brazzante Card Game">
+
+<div class="card-conteudo">
+
+<h2>
+O Início da Produção de Brazzante
+</h2>
+
+<p>
+Como nasceu o projeto Brazzante Card Game, desde as primeiras ideias até o desenvolvimento do universo e das mecânicas do jogo.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=kqg5ABJKHXY"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 20 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/pubglite.webp"
+alt="PUBG Lite">
+
+<div class="card-conteudo">
+
+<h2>
+Ascensão e queda do PUBG Lite
+</h2>
+
+<p>
+Como PUBG Lite levou a febre dos Battle Royale para milhões de PCs fracos e deixou saudades pra uma geração.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=5W5ln5vb22w"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 21 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/odiamos.webp"
+alt="Por Que Jogamos Jogos Que Odiamos">
+
+<div class="card-conteudo">
+
+<h2>
+Por Que Jogamos Jogos Que “Odiamos”?
+</h2>
+
+<p>
+A relação estranha entre estresse, vício, competitividade e os jogos online que nos fazem passar raiva, mas nunca abandonar.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=gfxcyoXeA4U"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 22 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/teoria.webp"
+alt="Por Que Jogos Perdem Público">
+
+<div class="card-conteudo">
+
+<h2>
+Por Que Jogos Tendem a Perder Público?
+</h2>
+
+<p>
+Uma teoria sobre como atualizações, competitividade, mudanças excessivas e o tempo acabam destruindo comunidades de jogos online.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=mZckDeS7mko"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 23 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/habbo iceberg.webp"
+alt="Iceberg do Habbo Hotel">
+
+<div class="card-conteudo">
+
+<h2>
+O Iceberg do Habbo Hotel
+</h2>
+
+<p>
+Golpes, quartos secretos, lendas urbanas, rarezas perdidas e os mistérios mais obscuros da história do Habbo Hotel.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=1vtJ6z7Ft8E"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 24 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/arteindie.webp"
+alt="Arte de Jogos Indie">
+
+<div class="card-conteudo">
+
+<h2>
+Como é Feita a Arte de Jogos Indie
+</h2>
+
+<p>
+Como pequenos desenvolvedores criam estilos visuais marcantes, pixel arts e identidades únicas mesmo com equipes reduzidas.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=aE2L9UvWb78"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 25 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/buddy poke.webp"
+alt="Buddy Poke">
+
+<div class="card-conteudo">
+
+<h2>
+A Febre do Buddy Poke
+</h2>
+
+<p>
+Como o Buddy Poke dominou o Orkut com avatares animados, presentes virtuais e interações que marcaram a internet brasileira.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=_gdn6rr7bJE"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 26 -->
+
+<div class="card-documentario">
+
+<img
+src="documentarios/mini fazenda.webp"
+alt="Buddy Poke">
+
+<div class="card-conteudo">
+
+<h2>
+O Auge do Mini Fazenda
+</h2>
+
+<p>
+Como o Mini Fazenda teve mais de 20 milhões de usuários no Orkut, marcando uma geração de usuários na internet brasileira.
+</p>
+
+<a
+href="https://www.youtube.com/watch?v=p1VMBzVuHOo"
+class="btn-vermais">
+
+VER MAIS
+
+</a>
+
+</div>
+
+</div>
+
+<!-- FINAL DOS ARTIGOS -->
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+width="18">
+
+Instagram
+
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+width="18">
+
+YouTube
+
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/3670/3670382.png"
+width="18">
+
+Steam
+
+</a>
+
+</div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/5519989087008?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20😊"
+class="whatsapp-float"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+alt="WhatsApp">
+
+</a>
+
+<script>
+
+/* PARTÍCULAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,659 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do Conquer Online
+</title>
+
+<meta name="description"
+content="A história completa do Conquer Online, o MMORPG que marcou a era das lan houses com PvP frenético, reborns e guerras de guildas.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/lUU-Pe3wz9k"
+title="Conquer Online"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+A História do Conquer Online
+</h1>
+
+<p>
+Conquer Online foi um dos MMORPGs mais marcantes da era das lan houses brasileiras.
+</p>
+
+<p>
+Com PvP frenético, guerras de guilda, sistema de reborn e um combate extremamente rápido para a época, o jogo conquistou milhões de jogadores durante os anos 2000.
+</p>
+
+<p>
+Mesmo após tantos anos, o jogo ainda é lembrado como um dos MMOs mais icônicos da geração de ouro dos RPGs online.
+</p>
+
+<h2>
+O Surgimento do Conquer Online
+</h2>
+
+<p>
+Conquer Online foi desenvolvido pela TQ Digital Entertainment, subsidiária da empresa chinesa NetDragon.
+</p>
+
+<p>
+O jogo foi lançado oficialmente em 17 de abril de 2003, inicialmente focado no público asiático e em países de língua inglesa.
+</p>
+
+<p>
+Na época, o MMORPG chamou atenção pelo seu combate extremamente rápido e pelo forte foco em PvP competitivo.
+</p>
+
+<img
+src="documentarios/conqueronline/exemplo (1).webp"
+alt="Conquer Online Antigo"
+loading="lazy">
+
+<p>
+O jogo começou com apenas quatro classes:
+</p>
+
+<p>
+• Trojan<br>
+• Warrior<br>
+• Archer<br>
+• Taoist
+</p>
+
+<p>
+Toda a ambientação do jogo era inspirada na mitologia chinesa e na China imperial.
+</p>
+
+<h2>
+Twin City e a Era de Ouro
+</h2>
+
+<p>
+A cidade principal do jogo era Twin City, considerada um dos lugares mais nostálgicos para os jogadores antigos.
+</p>
+
+<p>
+Era ali que aconteciam:
+</p>
+
+<p>
+• Comércio entre jogadores<br>
+• Duelos PvP<br>
+• Formação de guildas<br>
+• Recrutamento de equipes
+</p>
+
+<p>
+O marketplace era tão movimentado que muitas vezes era impossível enxergar o chão de tantos personagens online ao mesmo tempo.
+</p>
+
+<img
+src="documentarios/conqueronline/exemplo (2).webp"
+alt="Twin City"
+loading="lazy">
+
+<p>
+Outras áreas extremamente famosas também marcaram a comunidade:
+</p>
+
+<p>
+• Phoenix Castle<br>
+• Desert City<br>
+• Bird Island
+</p>
+
+<h2>
+Conquer Online 2.0
+</h2>
+
+<p>
+Em 2005, o jogo recebeu a atualização Conquer Online 2.0.
+</p>
+
+<p>
+Essa versão trouxe melhorias gráficas, nova interface, eventos sazonais, missões diárias e guerras de guildas muito mais organizadas.
+</p>
+
+<p>
+Além disso, o jogo ficou muito mais leve e otimizado para computadores mais simples.
+</p>
+
+<img
+src="documentarios/conqueronline/exemplo (3).webp"
+alt="Conquer Online 2.0"
+loading="lazy">
+
+<p>
+Foi justamente nessa época que o jogo começou a crescer absurdamente na América Latina e no Brasil.
+</p>
+
+<h2>
+A Expansão New Dynasty
+</h2>
+
+<p>
+Em 2008, Conquer Online recebeu uma das atualizações mais importantes da sua história: New Dynasty.
+</p>
+
+<p>
+A expansão trouxe:
+</p>
+
+<p>
+• Nova interface<br>
+• Novas missões<br>
+• Novos mapas<br>
+• Classe Ninja
+</p>
+
+<p>
+O Ninja rapidamente se tornou uma das classes mais populares do jogo graças ao seu PvP extremamente agressivo.
+</p>
+
+<img
+src="documentarios/conqueronline/exemplo (4).webp"
+alt="Classe Ninja"
+loading="lazy">
+
+<p>
+Nesse período, o jogo já ultrapassava 10 milhões de jogadores registrados.
+</p>
+
+<h2>
+O Auge do Conquer
+</h2>
+
+<p>
+Entre 2008 e 2010, o jogo viveu seu auge absoluto.
+</p>
+
+<p>
+Expansões como Legends Return adicionaram:
+</p>
+
+<p>
+• Subclasses<br>
+• Artefatos<br>
+• Novas dungeons<br>
+• Torneios PvP<br>
+• Classe Monge
+</p>
+
+<p>
+Na época, Conquer Online possuía entre 1 e 3 milhões de jogadores ativos mensalmente.
+</p>
+
+<p>
+Quem viveu essa época lembra perfeitamente de Twin City completamente lotada durante qualquer horário do dia.
+</p>
+
+<h2>
+O Início da Decadência
+</h2>
+
+<p>
+A partir de 2011, muitos jogadores começaram a reclamar das decisões tomadas pela TQ Digital.
+</p>
+
+<p>
+Diversas expansões começaram a adicionar sistemas extremamente complexos e focados em monetização.
+</p>
+
+<p>
+Entre elas:
+</p>
+
+<p>
+• Invasion of Pirates<br>
+• Oriental Assassin<br>
+• Kingdom War<br>
+• King of Kung Fu
+</p>
+
+<p>
+O jogo começou a receber:
+</p>
+
+<p>
+• Battle Power<br>
+• Talismãs<br>
+• Refinamentos extremos<br>
+• Sistemas de perfeição
+</p>
+
+<img
+src="documentarios/conqueronline/exemplo (5).webp"
+alt="Pay To Win"
+loading="lazy">
+
+<p>
+Com isso, a diferença entre jogadores gratuitos e usuários pagantes se tornou gigantesca.
+</p>
+
+<h2>
+Bots, Hacks e Servidores Privados
+</h2>
+
+<p>
+Outro problema enorme foi a explosão de bots e hacks dentro dos servidores oficiais.
+</p>
+
+<p>
+Ao mesmo tempo, começaram a surgir dezenas de servidores privados inspirados na versão 2.0 do jogo.
+</p>
+
+<p>
+Esses servidores ofereciam:
+</p>
+
+<p>
+• PvP mais equilibrado<br>
+• Menos dependência de cash<br>
+• Menos sistemas exagerados<br>
+• Melhor suporte da comunidade
+</p>
+
+<p>
+Por causa disso, muitos jogadores migraram para servidores alternativos buscando reviver a experiência clássica do jogo.
+</p>
+
+<img
+src="documentarios/conqueronline/exemplo (6).webp"
+alt="Servidor Privado Conquer"
+loading="lazy">
+
+<h2>
+O Conquer Atual
+</h2>
+
+<p>
+Nos anos seguintes, o jogo começou a receber atualizações cada vez mais exageradas.
+</p>
+
+<p>
+Novas classes, efeitos visuais absurdos, sistemas RNG e upgrades extremamente caros começaram a transformar completamente a identidade original do jogo.
+</p>
+
+<p>
+Boa parte da comunidade passou a considerar o Conquer moderno um laboratório de monetização.
+</p>
+
+<p>
+Mesmo assim, o jogo continua ativo até hoje recebendo atualizações constantes.
+</p>
+
+<h2>
+O Legado do Conquer Online
+</h2>
+
+<p>
+Apesar de todos os problemas, Conquer Online continua sendo lembrado como um dos MMORPGs mais importantes da geração dos anos 2000.
+</p>
+
+<p>
+O jogo criou amizades, rivalidades, guerras lendárias entre guildas e marcou profundamente milhares de jogadores brasileiros.
+</p>
+
+<p>
+Para muitos fãs, o verdadeiro Conquer Online continua vivo na memória da era 2.0, quando Twin City era lotada e o PvP dominava completamente as lan houses.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

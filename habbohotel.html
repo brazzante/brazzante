@@ -1,0 +1,668 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do Habbo Hotel
+</title>
+
+<meta name="description"
+content="A história completa do Habbo Hotel, desde o Mobiles Disco até o auge, polêmicas, protestos e sobrevivência do jogo após mais de 20 anos.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* PARTÍCULAS */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* ARTIGO */
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* VIDEO */
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ARTIGO -->
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/ES69vvV13Hk"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+A História do Habbo Hotel
+</h1>
+
+<p>
+Habbo Hotel foi um dos maiores MMOs sociais da internet e marcou profundamente a geração dos anos 2000.
+</p>
+
+<p>
+Com quartos personalizados, comércio de itens, comunidades gigantescas e um sistema social extremamente viciante, o jogo se tornou um verdadeiro fenômeno mundial.
+</p>
+
+<p>
+Mas antes de virar um império digital com milhões de jogadores, Habbo começou como um pequeno experimento criado por dois desenvolvedores finlandeses.
+</p>
+
+<h2>
+O Surgimento do Mobiles Disco
+</h2>
+
+<p>
+Tudo começou em 1999, quando Sampo Karjalainen e Aapo Kyrölä desenvolveram um pequeno chat virtual chamado Mobiles Disco.
+</p>
+
+<p>
+O projeto surgiu como uma experiência online voltada para fãs do grupo de rap finlandês Mobiles.
+</p>
+
+<p>
+O jogo utilizava tecnologia Java e Adobe Shockwave, algo extremamente avançado para a época.
+</p>
+
+<p>
+Apesar de simples, o sistema já permitia criar avatares, conversar em tempo real e interagir em ambientes virtuais.
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (1).webp"
+alt="Mobiles Disco"
+loading="lazy">
+
+<p>
+Mesmo limitado a poucos ambientes, o projeto chamou muita atenção durante os primeiros anos da internet popular.
+</p>
+
+<h2>
+A Criação da Sulake
+</h2>
+
+<p>
+Após perceberem o potencial comercial do projeto, os desenvolvedores fundaram oficialmente a Sulake Corporation em 2000.
+</p>
+
+<p>
+A empresa recebeu investimentos e começou a trabalhar em uma experiência muito mais ambiciosa.
+</p>
+
+<p>
+Foi então que nasceu o Hotelli Kultakala, conhecido também como Hotel Peixinho Dourado.
+</p>
+
+<p>
+Esse jogo introduziu elementos que se tornariam essenciais no Habbo Hotel:
+</p>
+
+<p>
+• Quartos privados<br>
+• Lista de amigos<br>
+• Créditos<br>
+• Salas públicas<br>
+• Criação de ambientes personalizados
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (2).webp"
+alt="Hotelli Kultakala"
+loading="lazy">
+
+<h2>
+O Nascimento do Habbo Hotel
+</h2>
+
+<p>
+Em 2001, a Sulake decidiu mudar o nome do projeto para algo mais internacional.
+</p>
+
+<p>
+Após diversas ideias descartadas, nasceu oficialmente o Habbo Hotel.
+</p>
+
+<p>
+Na mesma época surgiram os primeiros hotéis internacionais, incluindo Reino Unido e Alemanha.
+</p>
+
+<p>
+O crescimento foi tão rápido que a empresa começou a investir em propagandas de televisão e campanhas promocionais em diversos países.
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (3).webp"
+alt="Habbo Hotel Antigo"
+loading="lazy">
+
+<p>
+Pouco tempo depois, a Coca-Cola contratou a Sulake para criar um jogo baseado no Habbo chamado Coke Music.
+</p>
+
+<h2>
+A Chegada ao Brasil
+</h2>
+
+<p>
+Habbo Hotel chegou oficialmente ao Brasil em 2006.
+</p>
+
+<p>
+A Sulake percebeu rapidamente o enorme potencial do público brasileiro e investiu pesado em divulgação.
+</p>
+
+<p>
+O jogo apareceu em comerciais de TV, revistas adolescentes, programas de televisão e eventos online.
+</p>
+
+<p>
+Além disso, fãs sites como a Habbid ajudaram a transformar o jogo em um verdadeiro fenômeno nacional.
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (4).webp"
+alt="Habbo Brasil"
+loading="lazy">
+
+<p>
+A comunidade brasileira se tornou uma das mais ativas do mundo.
+</p>
+
+<h2>
+O Auge do Habbo
+</h2>
+
+<p>
+Entre 2009 e 2011, Habbo viveu seu auge absoluto.
+</p>
+
+<p>
+O jogo recebeu melhorias gráficas importantes com a migração do Shockwave para Adobe Flash.
+</p>
+
+<p>
+Novos sistemas foram adicionados constantemente, incluindo:
+</p>
+
+<p>
+• Feira Livre<br>
+• Comércio de itens<br>
+• Emblemas<br>
+• Eventos oficiais<br>
+• Sistemas de grupos<br>
+• Missões
+</p>
+
+<p>
+Em 2011, o Habbo Brasil ultrapassou 69 mil jogadores online simultaneamente.
+</p>
+
+<p>
+Globalmente, o jogo já possuía mais de 200 milhões de contas registradas.
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (5).webp"
+alt="Habbo Auge"
+loading="lazy">
+
+<h2>
+As Polêmicas de 2012
+</h2>
+
+<p>
+Em 2012, uma reportagem da emissora britânica Channel 4 revelou graves falhas na moderação do jogo.
+</p>
+
+<p>
+O caso teve repercussão mundial e abalou profundamente a reputação da Sulake.
+</p>
+
+<p>
+Grandes investidores e parceiros comerciais encerraram contratos com a empresa após o escândalo.
+</p>
+
+<p>
+Como resposta, a Sulake chegou a silenciar temporariamente todo o chat do jogo globalmente.
+</p>
+
+<h2>
+O Declínio
+</h2>
+
+<p>
+Nos anos seguintes, a ascensão dos smartphones e jogos mobile começou a reduzir drasticamente a popularidade do Habbo.
+</p>
+
+<p>
+Jogos como Clash of Clans, Subway Surfers e Candy Crush passaram a dominar o mercado casual.
+</p>
+
+<p>
+Além disso, mudanças internas começaram a gerar revolta na comunidade.
+</p>
+
+<p>
+Em 2016 surgiu o movimento #RipHabbo, criticando:
+</p>
+
+<p>
+• Impostos abusivos<br>
+• Mudanças visuais<br>
+• Censura excessiva<br>
+• Perda da identidade clássica
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (6).webp"
+alt="RipHabbo"
+loading="lazy">
+
+<p>
+Mesmo com protestos massivos, a empresa manteve todas as alterações.
+</p>
+
+<h2>
+A Era Unity e o Habbo Origins
+</h2>
+
+<p>
+Com o encerramento do Adobe Flash em 2020, Habbo precisou migrar totalmente para uma nova versão baseada em Unity.
+</p>
+
+<p>
+Essa mudança gerou novas críticas da comunidade e iniciou outro movimento chamado #SaveHabbo.
+</p>
+
+<p>
+Mesmo assim, o jogo continuou sobrevivendo graças ao forte fator nostálgico da comunidade.
+</p>
+
+<p>
+Em 2024, a Sulake lançou Habbo Hotel Origins, uma recriação fiel da experiência clássica de 2005.
+</p>
+
+<img
+src="documentarios/habbohotel/exemplo (7).webp"
+alt="Habbo Origins"
+loading="lazy">
+
+<p>
+A nova versão trouxe de volta o visual Shockwave original, recriando a experiência clássica para antigos jogadores.
+</p>
+
+<h2>
+O Legado do Habbo Hotel
+</h2>
+
+<p>
+Mesmo após mais de 20 anos, Habbo Hotel continua sendo um dos jogos sociais mais importantes da história da internet.
+</p>
+
+<p>
+O jogo ajudou a definir sistemas sociais online, comércio virtual, customização de ambientes e interação entre comunidades.
+</p>
+
+<p>
+Para milhões de jogadores brasileiros, Habbo não foi apenas um jogo, mas uma verdadeira rede social que marcou uma geração inteira.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+/* PARTÍCULAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

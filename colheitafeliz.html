@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+O Auge ao Fracasso do Colheita Feliz
+</title>
+
+<meta name="description"
+content="A história completa do Colheita Feliz, o jogo de fazenda que dominou o Orkut e marcou milhões de jogadores brasileiros.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* PARTÍCULAS */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* ARTIGO */
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+/* VIDEO YOUTUBE */
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ARTIGO -->
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/xsPaWOm-OSU"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+O Auge ao Fracasso do Colheita Feliz
+</h1>
+
+<p>
+Colheita Feliz foi um dos jogos mais populares da era do Orkut e marcou profundamente a internet brasileira durante os anos 2000.
+</p>
+
+<p>
+Apesar de muita gente lembrar do jogo apenas pela nostalgia, sua história envolve empresas gigantes, milhões de jogadores, campanhas publicitárias polêmicas, bugs, hacks e até a decadência das redes sociais da época.
+</p>
+
+<h2>
+O Início do Colheita Feliz
+</h2>
+
+<p>
+O jogo foi adaptado e distribuído pela empresa latino-americana Mentez, criada pelos empreendedores Juan Franco, Jaime Roldan e Tahiana D'Egmont.
+</p>
+
+<p>
+Seu desenvolvimento original veio da empresa chinesa Beijing Elex Technology, conhecida por publicar diversos jogos de navegador extremamente populares na América Latina.
+</p>
+
+<p>
+Entre eles estavam títulos como DDTank, Golden Land, Café Time, Rei e Conquistador e, claro, Colheita Feliz.
+</p>
+
+<p>
+A primeira versão do jogo chegou ao Orkut em 2008, aproveitando a nova função de aplicativos sociais da plataforma.
+</p>
+
+<p>
+Esses aplicativos permitiam jogos integrados à rede social, incentivando interação entre amigos, competição e compartilhamento de progresso.
+</p>
+
+<img
+src="documentarios/colheitafeliz/exemplo (1).webp"
+alt="Fazenda do Colheita Feliz"
+loading="lazy">
+
+<h2>
+A Fórmula Viciante
+</h2>
+
+<p>
+No início, Colheita Feliz tinha um visual extremamente simples, mas o verdadeiro diferencial não estava nos gráficos, e sim na interação social.
+</p>
+
+<p>
+Os jogadores podiam visitar fazendas de amigos, ajudar nas plantações ou simplesmente roubar colheitas prontas.
+</p>
+
+<p>
+Esse sistema criou uma dinâmica competitiva extremamente viciante.
+</p>
+
+<p>
+A progressão funcionava através de níveis, moedas, desbloqueio de terrenos e expansão da fazenda.
+</p>
+
+<p>
+Com o tempo, o jogo recebeu novos sistemas como animais, decorações, fertilizantes e itens premium comprados com moedas verdes.
+</p>
+
+<img
+src="documentarios/colheitafeliz/exemplo (2).webp"
+alt="Colheita Feliz"
+loading="lazy">
+
+<h2>
+Bugs, Hacks e Exploits
+</h2>
+
+<p>
+Assim como muitos jogos de navegador da época, Colheita Feliz sofreu com inúmeros bugs e programas de manipulação.
+</p>
+
+<p>
+Um dos métodos mais famosos envolvia o uso do programa Charles Proxy, capaz de alterar a comunicação entre o navegador e o servidor do jogo.
+</p>
+
+<p>
+Com isso, alguns usuários conseguiam duplicar itens, modificar compras e até obter créditos de forma indevida.
+</p>
+
+<p>
+Esses métodos eram compartilhados em comunidades do Orkut, fóruns e vídeos do YouTube.
+</p>
+
+<img
+src="documentarios/colheitafeliz/exemplo (3).webp"
+alt="Orkut e Colheita Feliz"
+loading="lazy">
+
+<h2>
+A Explosão de Popularidade
+</h2>
+
+<p>
+Em 2010, o jogo recebeu sua versão 2.0, trazendo uma reformulação visual completa.
+</p>
+
+<p>
+Menus, inventários, sistemas e gráficos foram atualizados, deixando o jogo muito mais moderno e chamativo.
+</p>
+
+<p>
+Novos recursos foram adicionados constantemente, incluindo:
+</p>
+
+<p>
+• Lagoa Feliz<br>
+• Mercado das Pulgas<br>
+• Ranking da Fazenda<br>
+• Jardins Suspensos<br>
+• Sistema de conquistas<br>
+• Roleta da sorte
+</p>
+
+<p>
+O jogo alcançou números absurdos para a época, ultrapassando 21 milhões de usuários ativos no Orkut.
+</p>
+
+<p>
+Naquele período, apenas o Buddy Poke possuía mais acessos dentro da rede social.
+</p>
+
+<h2>
+A Polêmica do Mini Bis
+</h2>
+
+<p>
+Uma das campanhas mais famosas do jogo aconteceu em parceria com a Lacta.
+</p>
+
+<p>
+O evento permitia plantar árvores especiais de Mini Bis e Bis Limão em troca de recompensas dentro do jogo.
+</p>
+
+<p>
+A promessa incluía moedas verdes gratuitas para os jogadores que concluíssem o evento.
+</p>
+
+<p>
+O problema é que a quantidade de créditos disponíveis era limitada, algo que não foi explicado claramente para os usuários.
+</p>
+
+<p>
+Milhões de jogadores participaram da promoção, causando instabilidade nos servidores e esgotando as recompensas rapidamente.
+</p>
+
+<p>
+Isso gerou revolta massiva na comunidade, reclamações em fóruns, denúncias e até vídeos viralizados criticando a campanha.
+</p>
+
+<img
+src="documentarios/colheitafeliz/exemplo (4).webp"
+alt="Evento Mini Bis"
+loading="lazy">
+
+<h2>
+A Queda do Orkut
+</h2>
+
+<p>
+Mesmo com o enorme sucesso, Colheita Feliz enfrentava forte concorrência de jogos como Mini Fazenda e FarmVille.
+</p>
+
+<p>
+Enquanto isso, o Orkut começava a perder espaço para o Facebook.
+</p>
+
+<p>
+Em 2014, o Google anunciou oficialmente o encerramento da rede social.
+</p>
+
+<p>
+Com isso, boa parte da base de jogadores desapareceu junto da plataforma.
+</p>
+
+<p>
+Tentativas de lançar o jogo no Facebook não conseguiram repetir o mesmo sucesso que existiu no Orkut.
+</p>
+
+<h2>
+O Fim da Mentez
+</h2>
+
+<p>
+Nos anos seguintes, a Mentez começou a desaparecer do mercado.
+</p>
+
+<p>
+Em 2016, seus jogos foram removidos do Facebook e a empresa encerrou suas operações no Brasil.
+</p>
+
+<p>
+Sua divisão de pagamentos, chamada Paymentez, continuou funcionando até ser adquirida pela Nuvei em 2021.
+</p>
+
+<p>
+Mesmo assim, o legado de Colheita Feliz permaneceu vivo na memória de milhões de brasileiros.
+</p>
+
+<img
+src="documentarios/colheitafeliz/exemplo (5).webp"
+alt="Evento Mini Bis"
+loading="lazy">
+
+<h2>
+O Legado do Jogo
+</h2>
+
+<p>
+Hoje, Colheita Feliz é lembrado como um dos maiores fenômenos da internet brasileira.
+</p>
+
+<p>
+O jogo representou uma época em que as redes sociais eram mais simples, os jogos de navegador dominavam as lan houses e a interação entre amigos era o principal motivo para continuar jogando.
+</p>
+
+<p>
+Mesmo anos após seu encerramento, ainda existem projetos tentando preservar versões antigas do game através de servidores alternativos.
+</p>
+
+<p>
+Para muitos jogadores, Colheita Feliz não foi apenas um jogo, mas uma das experiências mais marcantes da era de ouro do Orkut.
+</p>
+
+<img
+src="documentarios/colheitafeliz/exemplo (6).webp"
+alt="Evento Mini Bis"
+loading="lazy">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+/* PARTÍCULAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>
