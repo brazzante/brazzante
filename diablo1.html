@@ -1,0 +1,745 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Curiosidades sobre Diablo 1
+</title>
+
+<meta name="description"
+content="Curiosidades sobre Diablo 1, o jogo de RPG de ação que revolucionou a indústria dos anos 90.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* PARTÍCULAS */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* ARTIGO */
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* VIDEO */
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ARTIGO -->
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/vpBLzRvA1Og"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+A História de Diablo
+</h1>
+
+<p>
+Diablo é considerado um dos jogos mais importantes da história dos RPGs eletrônicos.
+</p>
+
+<p>
+Lançado no final de 1996, o título ajudou a criar um gênero inteiro que continua influenciando jogos até os dias atuais.
+</p>
+
+<p>
+Com sua atmosfera sombria, combates viciantes, geração aleatória de masmorras e sistema de itens lendários, Diablo se tornou uma referência para praticamente todos os Action RPGs lançados nas décadas seguintes.
+</p>
+
+<p>
+Mas antes de se transformar em uma das maiores franquias da Blizzard, Diablo começou como um projeto muito diferente do jogo que conhecemos atualmente.
+</p>
+
+<h2>
+A Vila de Tristram
+</h2>
+
+<p>
+A aventura de Diablo começa na pequena vila de Tristram, um lugar aparentemente tranquilo que esconde uma ameaça terrível sob seus pés.
+</p>
+
+<p>
+Os moradores relatam que criaturas demoníacas começaram a surgir da antiga catedral localizada nos arredores da cidade.
+</p>
+
+<p>
+Ao investigar os acontecimentos, o jogador descobre que o Senhor do Terror, Diablo, conseguiu escapar de sua prisão subterrânea e passou a corromper tudo ao seu redor.
+</p>
+
+<p>
+O arcebispo Lazarus foi uma das primeiras vítimas da influência demoníaca.
+</p>
+
+<p>
+Manipulado por Diablo, ele enganou os habitantes da região e utilizou o príncipe Albrecht como receptáculo para o demônio.
+</p>
+
+<p>
+Enquanto isso, o rei Leoric enlouqueceu completamente, transformando-se no lendário Rei Esqueleto, um dos chefes mais icônicos da franquia.
+</p>
+
+<img
+src="documentarios/diablo1/exemplo (1).webp"
+alt="Tristram"
+loading="lazy">
+
+<p>
+Apesar do clima sombrio, Tristram também servia como centro de apoio para os aventureiros.
+</p>
+
+<p>
+O ferreiro Griswold vendia armas e armaduras, Pepin oferecia curas e poções, enquanto Adria fornecia pergaminhos e magias poderosas.
+</p>
+
+<p>
+Já o misterioso Wirt, o garoto da perna de pau, vendia itens raros por preços normalmente absurdos.
+</p>
+
+<h2>
+O Surgimento da Condor
+</h2>
+
+<p>
+A história de Diablo começa muito antes de seu lançamento.
+</p>
+
+<p>
+O principal responsável pela criação do jogo foi David Brevik, um dos fundadores da Condor, um pequeno estúdio independente que mais tarde seria adquirido pela Blizzard.
+</p>
+
+<p>
+Após a aquisição, a empresa passou a se chamar Blizzard North.
+</p>
+
+<p>
+Foi dentro desse estúdio que surgiram Diablo e posteriormente Diablo II, dois dos jogos mais importantes da história dos RPGs.
+</p>
+
+<p>
+Curiosamente, a ideia original de Diablo nasceu quando Brevik ainda estava no ensino médio.
+</p>
+
+<p>
+O nome do jogo foi inspirado pelo Monte Diablo, uma montanha localizada na Califórnia próxima à região onde ele morava.
+</p>
+
+<img
+src="documentarios/diablo1/exemplo (2).webp"
+alt="David Brevik"
+loading="lazy">
+
+<h2>
+Um RPG de Turnos que Quase Existiu
+</h2>
+
+<p>
+Uma das curiosidades mais surpreendentes sobre Diablo é que ele quase foi um jogo completamente diferente.
+</p>
+
+<p>
+O conceito original era inspirado em clássicos como Rogue e NetHack.
+</p>
+
+<p>
+Isso significa que o jogo seria totalmente baseado em turnos.
+</p>
+
+<p>
+Além disso, o projeto possuía morte permanente.
+</p>
+
+<p>
+Caso o jogador morresse, o personagem seria perdido para sempre.
+</p>
+
+<p>
+A proposta seguia o estilo dos chamados roguelikes, gênero pelo qual David Brevik era apaixonado.
+</p>
+
+<p>
+Na prática, isso significaria um Diablo muito mais lento e estratégico do que a versão que acabou sendo lançada.
+</p>
+
+<h2>
+A Blizzard Recusou o Projeto
+</h2>
+
+<p>
+Hoje parece impossível imaginar, mas várias empresas recusaram financiar Diablo.
+</p>
+
+<p>
+Na época, muitos executivos acreditavam que RPGs estavam mortos comercialmente.
+</p>
+
+<p>
+Inclusive a própria Blizzard demonstrou pouco interesse inicialmente.
+</p>
+
+<p>
+Somente após o enorme sucesso de Warcraft é que a empresa decidiu dar uma chance ao projeto da Condor.
+</p>
+
+<p>
+Essa decisão acabaria mudando para sempre a história dos videogames.
+</p>
+
+<h2>
+A Revolução do Tempo Real
+</h2>
+
+<p>
+Pouco antes do lançamento, a Blizzard sugeriu uma mudança radical.
+</p>
+
+<p>
+O jogo deveria abandonar os turnos e se tornar um RPG em tempo real.
+</p>
+
+<p>
+David Brevik não gostou da ideia.
+</p>
+
+<p>
+Na verdade, ele era totalmente contra a mudança.
+</p>
+
+<p>
+Porém, após uma votação interna, a maioria da equipe aprovou a proposta.
+</p>
+
+<p>
+Brevik acreditava que seriam necessários meses de trabalho para implementar a novidade.
+</p>
+
+<p>
+Mas após um único final de semana de programação, ele conseguiu transformar o sistema inteiro.
+</p>
+
+<p>
+Quando viu o resultado funcionando, percebeu que aquilo era muito melhor do que havia imaginado.
+</p>
+
+<p>
+Foi naquele momento que nasceu oficialmente o gênero Action RPG.
+</p>
+
+<img
+src="documentarios/diablo1/exemplo (3).webp"
+alt="Action RPG"
+loading="lazy">
+
+<h2>
+A Criação do Visual Isométrico
+</h2>
+
+<p>
+Outro elemento fundamental de Diablo foi seu visual.
+</p>
+
+<p>
+O famoso estilo isométrico surgiu graças à influência de X-COM: UFO Defense, lançado em 1994.
+</p>
+
+<p>
+A equipe utilizou exatamente o mesmo tamanho de tiles vistos naquele jogo.
+</p>
+
+<p>
+Essa decisão acabou criando uma das características mais marcantes da franquia.
+</p>
+
+<p>
+Até hoje, muitos jogadores associam imediatamente a visão isométrica à série Diablo.
+</p>
+
+<h2>
+O Lançamento e o Sucesso
+</h2>
+
+<p>
+Diablo foi lançado oficialmente em 31 de dezembro de 1996.
+</p>
+
+<p>
+O projeto havia sido desenvolvido por uma equipe extremamente pequena.
+</p>
+
+<p>
+A Condor recebeu aproximadamente 300 mil dólares para criar o jogo, valor que precisou ser dividido entre cerca de quinze funcionários.
+</p>
+
+<p>
+Mesmo com recursos limitados, o resultado superou todas as expectativas.
+</p>
+
+<p>
+O jogo rapidamente se tornou um sucesso mundial.
+</p>
+
+<h2>
+Battle.net e os Problemas com Cheats
+</h2>
+
+<p>
+Diablo também foi um dos pioneiros na popularização do multiplayer online em RPGs de ação.
+</p>
+
+<p>
+Porém, o sistema da Battle.net foi implementado muito próximo do lançamento.
+</p>
+
+<p>
+Grande parte dos dados dos personagens era armazenada localmente.
+</p>
+
+<p>
+Isso permitia que jogadores modificassem seus arquivos e utilizassem cheats online.
+</p>
+
+<p>
+Como consequência, hacks e itens ilegítimos se espalharam rapidamente pelos servidores.
+</p>
+
+<p>
+Esses problemas foram tão graves que influenciaram diretamente a arquitetura online de Diablo II.
+</p>
+
+<h2>
+A Era dos Cheats
+</h2>
+
+<p>
+Entre todas as trapaças existentes, nenhuma ficou tão famosa quanto o DUP.
+</p>
+
+<p>
+Esse exploit permitia duplicar itens infinitamente.
+</p>
+
+<p>
+Jogadores conseguiam copiar armas lendárias, armaduras raras e grandes quantidades de ouro utilizando um método extremamente simples.
+</p>
+
+<p>
+A prática se espalhou rapidamente e virou parte da história do jogo.
+</p>
+
+<h2>
+O Legado da Comunidade
+</h2>
+
+<p>
+Mesmo quase trinta anos após seu lançamento, Diablo continua recebendo melhorias feitas pela comunidade.
+</p>
+
+<p>
+Um dos projetos mais famosos é o mod Diablo HD Belzebub.
+</p>
+
+<p>
+Desenvolvido gratuitamente por fãs, o mod moderniza diversos aspectos do jogo sem alterar sua essência.
+</p>
+
+<p>
+Novas classes, melhorias gráficas, resolução widescreen, sistemas de armazenamento compartilhado e diversas otimizações foram adicionadas ao longo dos anos.
+</p>
+
+<p>
+Muitos jogadores consideram o Belzebub uma espécie de Diablo 1.5.
+</p>
+
+<img
+src="documentarios/diablo1/exemplo (4).webp"
+alt="Diablo HD Belzebub"
+loading="lazy">
+
+<h2>
+O Legado de Diablo
+</h2>
+
+<p>
+Diablo não apenas criou uma franquia de sucesso.
+</p>
+
+<p>
+Ele ajudou a definir um gênero inteiro.
+</p>
+
+<p>
+Sua influência pode ser vista em jogos como Path of Exile, Torchlight, Grim Dawn, Lost Ark e até mesmo em diversos sistemas presentes nos RPGs modernos.
+</p>
+
+<p>
+O jogo transformou uma ideia simples de exploração de masmorras em uma experiência viciante baseada em combate, progressão e busca constante por equipamentos melhores.
+</p>
+
+<p>
+Mesmo após décadas, Tristram continua sendo uma das cidades mais reconhecidas da história dos videogames.
+</p>
+
+<p>
+E para milhões de jogadores, Diablo permanece como um dos maiores clássicos já criados pela indústria dos games.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+/* PARTÍCULAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

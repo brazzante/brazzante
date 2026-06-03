@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do Crossfire
+</title>
+
+<meta name="description"
+content="A história completa do Crossfire, um dos jogos de tiro online mais populares da década de 2010. Descubra como o FPS da Smilegate conquistou milhões de jogadores brasileiros e se tornou um fenômeno mundial. Saiba sobre seus mapas, modos, armas lendárias, bugs famosos e o legado que deixou para a comunidade gamer.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/PkMD3VkSgio"
+title="Click Jogos"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>A História do CrossFire</h1>
+
+<p>CrossFire foi um dos jogos de tiro online mais populares da década de 2010 e marcou profundamente uma geração de jogadores brasileiros.</p>
+
+<p>Com partidas rápidas, dezenas de modos de jogo, armas lendárias e uma comunidade gigantesca, o FPS da Smilegate se tornou um verdadeiro fenômeno mundial.</p>
+
+<h2>O Surgimento do CrossFire</h2>
+
+<p>CrossFire foi desenvolvido pela Smilegate, uma empresa da Coreia do Sul fundada em 2002. O jogo foi lançado oficialmente em maio de 2007 e colocava duas facções militares em conflito: Global Risk e Black List.</p>
+
+<p>Desde o início, a proposta era criar um FPS gratuito e extremamente leve, capaz de rodar até mesmo em computadores simples encontrados em lan houses e cyber cafés.</p>
+
+<img src="documentarios/crossfire/exemplo1.webp" alt="CrossFire Antigo">
+
+<h2>O Sucesso na China</h2>
+
+<p>Apesar de ter sido criado na Coreia do Sul, o principal mercado do jogo rapidamente se tornou a China. A Tencent lançou o jogo no país em 2008 e milhões de jogadores passaram a frequentar os servidores diariamente.</p>
+
+<p>O sucesso foi tão grande que CrossFire se tornou um dos jogos mais lucrativos da história dos games.</p>
+
+
+<h2>A Chegada ao Brasil</h2>
+
+<p>CrossFire chegou oficialmente ao Brasil em 2011 através da Z8Games. Durante vários anos ele se tornou o FPS mais jogado do país, dominando lan houses e computadores domésticos.</p>
+
+<p>Grande parte do sucesso veio da facilidade de instalação, dos requisitos baixos e da enorme quantidade de conteúdo disponível.</p>
+
+<img src="documentarios/crossfire/exemplo2.webp" alt="CrossFire Brasil">
+
+<h2>Mapas e Modos Clássicos</h2>
+
+<p>Mapas como Castelo, Egito e Navio ficaram eternizados na memória da comunidade brasileira.</p>
+
+<p>Além disso, modos como Fantasma, Sombra, Super Soldado, Zumbi e Lâmina Mortal ajudaram a manter o jogo sempre divertido.</p>
+
+<h2>Os Bugs que Viraram Lenda</h2>
+
+<p>Por utilizar uma tecnologia antiga, CrossFire acumulou diversos bugs famosos. Era possível esconder a C4 em locais específicos, entrar dentro de caixas e utilizar técnicas como Bunny Hop, conhecido pelos brasileiros como "cavalar".</p>
+
+<p>O famoso "pezinho" também permitia alcançar áreas normalmente inacessíveis dos mapas.</p>
+
+
+<h2>O Auge Mundial</h2>
+
+<p>Em 2013, CrossFire arrecadou cerca de 957 milhões de dólares e se tornou o jogo mais lucrativo do mundo naquele período, superando gigantes como World of Warcraft e League of Legends.</p>
+
+<p>Nessa mesma época nasceu o CrossFire Stars (CFS), campeonato mundial que reuniu as melhores equipes do planeta.</p>
+
+<img src="documentarios/crossfire/exemplo3.webp" alt="CrossFire maior game mundial">
+
+<h2>Armas e Skins Memoráveis</h2>
+
+<p>Entre as armas mais desejadas estavam a M4A1 Sakura, M14 Dragão Imperial, Kit Super Dragon e a lendária M4A1 Vitoriosa.</p>
+
+<p>Ter uma arma rara era motivo de orgulho e frequentemente outros jogadores pediam para experimentá-la durante as partidas.</p>
+
+
+<h2>A Era dos Hacks</h2>
+
+<p>Entre 2011 e 2017, os hacks se tornaram um dos maiores problemas do jogo. Wall Hack, No Recoil, Speed Hack, Fly Hack e diversas outras trapaças passaram a dominar os servidores públicos.</p>
+
+<p>Mesmo com sistemas anticheat e denúncias, a situação continuou sendo uma das principais reclamações da comunidade.</p>
+
+<h2>O Declínio</h2>
+
+<p>Com o passar dos anos, muitos jogadores abandonaram o jogo devido à presença constante de hackers e ao foco crescente em monetização.</p>
+
+<p>Diversos servidores internacionais acabaram encerrando suas atividades, reduzindo ainda mais a presença global da franquia.</p>
+
+<h2>O Futuro da Franquia</h2>
+
+<p>A Smilegate continuou expandindo o universo CrossFire através de jogos como CrossFire Legends, CrossFire HD, CrossFire Zero, CrossFire Legion e CrossFire X.</p>
+
+<p>Rumores recentes também apontam para o possível desenvolvimento de um CrossFire 2.</p>
+
+<img src="documentarios/crossfire/exemplo4.webp" alt="CrossFire 1 bilhão jogadores">
+
+<h2>O Legado do CrossFire</h2>
+
+<p>CrossFire ajudou a definir uma geração de FPS online gratuitos. Durante anos dominou lan houses, reuniu amigos e proporcionou momentos inesquecíveis para milhões de jogadores brasileiros.</p>
+
+<p>Mesmo após tantos anos, continua sendo lembrado como um dos jogos online mais importantes da era de ouro dos anos 2000 e 2010.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>

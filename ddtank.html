@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+A História do DDTank
+</title>
+
+<meta name="description"
+content="A história completa do ddtank, o sucessor espiritual do Worms e Gunbold como jogo de tiro por turnos.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* MENU */
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+/* PARTÍCULAS */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* ARTIGO */
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* VIDEO */
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ARTIGO -->
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/MLgJXf3m-bo"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+<h1>
+A História do DDTank
+</h1>
+
+<p>
+DDTank foi um dos jogos mais importantes da era dos navegadores e marcou profundamente uma geração de jogadores durante os anos de ouro do Adobe Flash.
+</p>
+
+<p>
+Com sua jogabilidade simples, visual carismático e requisitos extremamente baixos, o jogo conquistou milhões de jogadores ao redor do mundo e se tornou um verdadeiro fenômeno no Brasil durante os anos 2010.
+</p>
+
+<p>
+Mas antes de virar um dos maiores jogos de navegador da internet, DDTank surgiu como uma aposta simples da indústria chinesa para criar uma experiência divertida, acessível e totalmente gratuita.
+</p>
+
+<h2>
+As Inspirações do DDTank
+</h2>
+
+<p>
+Embora muitas pessoas considerem DDTank um jogo único, sua origem possui fortes inspirações em outros títulos que já faziam sucesso anos antes.
+</p>
+
+<p>
+A principal referência foi Worms, lançado originalmente em 1995. No clássico jogo, equipes de minhocas se enfrentavam utilizando armas variadas enquanto precisavam calcular ângulo, força e trajetória dos disparos.
+</p>
+
+<p>
+Anos depois surgiu Gunbound, lançado em 2003 pela Softnyx. O jogo trouxe a mesma fórmula para o ambiente online e acabou se tornando extremamente popular em diversos países.
+</p>
+
+<p>
+Foi justamente observando o sucesso desses jogos que a desenvolvedora chinesa 7Road decidiu criar sua própria versão da fórmula.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (1).webp"
+alt="Inspirações do DDTank"
+loading="lazy">
+
+<h2>
+O Surgimento da 7Road
+</h2>
+
+<p>
+A empresa responsável pelo desenvolvimento do DDTank foi a 7Road, fundada em 2008 na cidade de Shenzhen, na China.
+</p>
+
+<p>
+A companhia foi criada com foco em jogos online para navegador, uma área que crescia rapidamente naquela época graças à popularização do Adobe Flash.
+</p>
+
+<p>
+Diferente dos MMORPGs tradicionais que exigiam downloads demorados e computadores mais potentes, os jogos em navegador permitiam que qualquer pessoa acessasse o conteúdo apenas criando uma conta e abrindo uma página na internet.
+</p>
+
+<p>
+A proposta era simples: oferecer diversão imediata sem exigir instalação.
+</p>
+
+<p>
+Pouco tempo depois de sua fundação, a empresa lançou DDTank no mercado asiático durante 2009.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (2).webp"
+alt="7Road"
+loading="lazy">
+
+<h2>
+A Chegada ao Brasil
+</h2>
+
+<p>
+O sucesso do jogo chamou atenção de diversas empresas especializadas em publicação de jogos estrangeiros.
+</p>
+
+<p>
+Foi então que a Beijing Elex Technology adquiriu os direitos de publicação em vários países.
+</p>
+
+<p>
+No Brasil, a empresa utilizava a marca 337.com para operar seus serviços.
+</p>
+
+<p>
+Muitos jogadores acreditavam que a 337 era uma empresa independente, mas na realidade ela era apenas uma divisão da própria Elex responsável pela publicação de jogos internacionais.
+</p>
+
+<p>
+Foi através dela que DDTank chegou oficialmente ao Brasil no final de 2010.
+</p>
+
+<p>
+A localização para português, os servidores nacionais e os métodos de pagamento em moeda local ajudaram o jogo a conquistar rapidamente uma enorme comunidade.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (3).webp"
+alt="DDTank Brasil"
+loading="lazy">
+
+<h2>
+Por Que o Jogo Fez Tanto Sucesso?
+</h2>
+
+<p>
+Existem vários motivos para explicar o sucesso gigantesco do DDTank no Brasil.
+</p>
+
+<p>
+O primeiro deles era a acessibilidade.
+</p>
+
+<p>
+Na época, muitas pessoas ainda utilizavam computadores simples que tinham dificuldade para rodar jogos mais pesados.
+</p>
+
+<p>
+Como DDTank funcionava diretamente no navegador, praticamente qualquer computador conseguia executá-lo sem problemas.
+</p>
+
+<p>
+Outro fator importante era seu visual.
+</p>
+
+<p>
+Os personagens utilizavam um estilo conhecido como chibi, com cabeças grandes, expressões exageradas e aparência extremamente carismática.
+</p>
+
+<p>
+Isso ajudava a criar uma identidade própria e fazia com que o jogo fosse facilmente reconhecido.
+</p>
+
+<p>
+Além disso, sua jogabilidade era fácil de aprender, mas difícil de dominar.
+</p>
+
+<p>
+Qualquer jogador conseguia entender os controles em poucos minutos, mas levar em consideração vento, ângulo, força e posicionamento exigia muita prática.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (4).webp"
+alt="Gameplay DDTank"
+loading="lazy">
+
+<h2>
+Como Funcionava a Jogabilidade
+</h2>
+
+<p>
+As partidas eram disputadas em turnos.
+</p>
+
+<p>
+Cada jogador possuía uma quantidade limitada de energia para se movimentar pelo cenário e realizar suas ações.
+</p>
+
+<p>
+O objetivo era eliminar os adversários utilizando diferentes armas e itens especiais.
+</p>
+
+<p>
+Os disparos exigiam que o jogador calculasse cuidadosamente a trajetória do projétil.
+</p>
+
+<p>
+Um erro pequeno no ângulo ou na força podia fazer o tiro passar longe do alvo.
+</p>
+
+<p>
+Além disso, o cenário era destrutível.
+</p>
+
+<p>
+Explosões podiam abrir crateras, derrubar plataformas e até mesmo enterrar jogadores durante a partida.
+</p>
+
+<p>
+Essa característica adicionava uma camada estratégica muito maior ao combate.
+</p>
+
+<h2>
+Muito Mais Que Apenas Batalhas
+</h2>
+
+<p>
+Apesar de ser conhecido principalmente por suas partidas PvP, DDTank possuía uma enorme quantidade de sistemas paralelos.
+</p>
+
+<p>
+Os jogadores podiam visitar o Ferreiro para fortalecer equipamentos, aumentar atributos e melhorar suas armas.
+</p>
+
+<p>
+Também existia o Spa, a Central de Namoro e a Sala de Casamento, locais criados para interação social entre os jogadores.
+</p>
+
+<p>
+O Centro Comercial permitia adquirir roupas, acessórios e diversos itens cosméticos.
+</p>
+
+<p>
+Já as Sociedades funcionavam como guildas, reunindo grupos de jogadores em busca de vantagens exclusivas.
+</p>
+
+<p>
+Tudo isso transformava o DDTank em muito mais do que apenas um jogo de batalha.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (5).webp"
+alt="Sistemas do DDTank"
+loading="lazy">
+
+<h2>
+A Era de Ouro
+</h2>
+
+<p>
+Entre 2010 e 2016, DDTank viveu o período mais importante de sua história.
+</p>
+
+<p>
+Milhares de jogadores acessavam os servidores diariamente e o jogo se tornou um dos maiores sucessos dos navegadores no Brasil.
+</p>
+
+<p>
+Em 2011 foi realizado o primeiro Bullet King, campeonato mundial oficial do jogo organizado na China.
+</p>
+
+<p>
+O evento ajudou a fortalecer ainda mais a comunidade competitiva.
+</p>
+
+<p>
+Durante esses anos, DDTank se tornou presença constante em escolas, lan houses e comunidades online.
+</p>
+
+<h2>
+A Monetização e as Críticas da Comunidade
+</h2>
+
+<p>
+Conforme o jogo crescia, novos sistemas começaram a ser adicionados.
+</p>
+
+<p>
+Pets, armas especiais, montarias, sistemas de cartas, VIPs mensais e diversos eventos de recarga passaram a fazer parte da experiência.
+</p>
+
+<p>
+Com o tempo, muitos jogadores começaram a sentir que o jogo estava se tornando excessivamente pay-to-win.
+</p>
+
+<p>
+A diferença entre jogadores que investiam dinheiro e aqueles que jogavam gratuitamente ficava cada vez maior.
+</p>
+
+<p>
+A remoção de algumas formas gratuitas de progressão gerou críticas ainda mais fortes dentro da comunidade.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (6).webp"
+alt="Pay to Win"
+loading="lazy">
+
+<h2>
+O Fim da Versão de Navegador
+</h2>
+
+<p>
+Em 2017, a Adobe anunciou oficialmente o encerramento do Flash Player.
+</p>
+
+<p>
+A notícia representou um enorme problema para milhares de jogos online que dependiam da tecnologia.
+</p>
+
+<p>
+Enquanto algumas empresas migraram seus jogos para novas plataformas, o DDTank acabou seguindo um caminho diferente.
+</p>
+
+<p>
+A desenvolvedora passou a concentrar seus esforços quase exclusivamente no DDTank Mobile.
+</p>
+
+<p>
+Pouco a pouco, a versão clássica em navegador foi sendo abandonada.
+</p>
+
+<p>
+Em 2020, o acesso ao jogo original praticamente desapareceu, encerrando uma das eras mais importantes dos jogos em navegador.
+</p>
+
+<img
+src="documentarios/ddtank/exemplo (7).webp"
+alt="Fim do Flash Player"
+loading="lazy">
+
+<h2>
+O Legado do DDTank
+</h2>
+
+<p>
+Mesmo após seu encerramento oficial nos navegadores, DDTank continua sendo lembrado com enorme carinho por seus antigos jogadores.
+</p>
+
+<p>
+O jogo marcou uma geração inteira e se tornou um dos maiores símbolos da era Flash.
+</p>
+
+<p>
+Sua combinação de estratégia, interação social e acessibilidade ajudou a criar uma comunidade apaixonada que permanece ativa até os dias atuais.
+</p>
+
+<p>
+Para milhões de brasileiros, DDTank não foi apenas um jogo, mas uma parte importante da infância e adolescência durante os anos de ouro da internet.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+/* PARTÍCULAS */
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>
