@@ -1190,11 +1190,195 @@ POPUP MANUTENÇÃO
         padding:14px;
     }
 }
+
+<-- RESPONSIVO PRODUTOS tela mobile -->
+
+@media(max-width:768px){
+
+    .grid-produtos{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+    }
+
+    .produto{
+
+        border-radius:12px;
+    }
+
+    .carrossel-img{
+
+        height:140px;
+
+        padding:8px;
+    }
+
+    .produto-info{
+
+        padding:10px;
+    }
+
+    .produto-info h3{
+
+        font-size:13px;
+
+        line-height:1.3;
+
+        min-height:50px;
+    }
+
+    .preco{
+
+        font-size:18px;
+
+        margin-bottom:10px;
+    }
+
+    .btn-comprar{
+
+        padding:10px;
+
+        font-size:13px;
+    }
+
+    .btn-carrossel{
+
+        width:28px;
+        height:28px;
+
+        font-size:12px;
+    }
+
+    .desconto{
+
+        font-size:12px;
+
+        padding:5px 8px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .grid-produtos{
+
+        display:grid !important;
+
+        grid-template-columns:1fr 1fr !important;
+
+        gap:10px !important;
+
+    }
+
+}
+
+.produto-extra{
+    display:none;
+}
+
+.streaming-extra{
+    display:none;
+}
+
+.jogo-extra{
+    display:none;
+}
+
+.btn-ver-mais{
+
+    display:block;
+
+    margin:30px auto 0;
+
+    padding:15px 30px;
+
+    background:#940000;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-ver-mais:hover{
+
+    background:#b10000;
+}
+/* BOTÕES DE NAVEGAÇÃO */
+
+.atalhos-home{
+
+    padding:20px;
+}
+
+.atalhos-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:15px;
+}
+
+.atalho-btn{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#940000;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.25);
+}
+
+.atalho-btn:hover{
+
+    background:#b30000;
+
+    transform:translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .atalhos-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
 </style>
 </head>
 
 <body>
-<!-- POPUP LOJA EM MANUTENÇÃO -->
+
+<!-- POPUP LOJA EM MANUTENÇÃO (retirar comentário para ativar)
 
 <div id="popupManutencao" class="popup-overlay">
 
@@ -1242,7 +1426,7 @@ POPUP MANUTENÇÃO
 
 </div>
 
-<!-- FIM DO POPUP ABERTURA DO SITE -->
+ -->
 
 <div id="particles"></div>
 <header>
@@ -1259,13 +1443,9 @@ POPUP MANUTENÇÃO
 
 <nav><ul>
 
-<li><a href="#">Início</a></li>
-
-<li><a href="#produtos">Loja</a></li>
+<li><a href="#produtos">Início</a></li>
 
 <li><a href="documentarios.html">Documentários</a></li>
-
-<li><a href="#blog">Novidades</a></li>
 
 <li><a href="#contato">Contato</a></li>
 
@@ -1347,7 +1527,41 @@ POPUP MANUTENÇÃO
     </div>
 
 </section>
+<!-- botões de navegação -->
 
+<!-- BOTÕES DE NAVEGAÇÃO -->
+
+<section class="atalhos-home">
+
+    <div class="container">
+
+        <div class="atalhos-grid">
+
+            <a href="#produtos" class="atalho-btn">
+                Produtos
+            </a>
+
+            <a href="#streamings" class="atalho-btn">
+                Streamings
+            </a>
+
+            <a href="#jogos" class="atalho-btn">
+                Jogos
+            </a>
+
+            <a href="#blog" class="atalho-btn">
+                Novidades
+            </a>
+
+            <a href="#contato" class="atalho-btn">
+                Contato
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- PRODUTOS -->
 
@@ -1778,7 +1992,7 @@ Comprar
 
 <!-- PRODUTO 9 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -1825,7 +2039,7 @@ Comprar
 
 <!-- PRODUTO 10 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -1872,7 +2086,7 @@ Comprar
 
 <!-- PRODUTO 10 pt 1 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -1919,7 +2133,7 @@ Comprar
 
 <!-- PRODUTO 11 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -1971,7 +2185,7 @@ Comprar
 
 <!-- PRODUTO 12 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2018,7 +2232,7 @@ Comprar
 
 <!-- PRODUTO 13 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2065,7 +2279,7 @@ Comprar
 
 <!-- PRODUTO 14 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2112,7 +2326,7 @@ Comprar
 
 <!-- PRODUTO 15 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2159,7 +2373,7 @@ Comprar
 
 <!-- PRODUTO 16 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2212,7 +2426,7 @@ Comprar
 
 <!-- PRODUTO 17 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2260,7 +2474,7 @@ Comprar
 
 <!-- PRODUTO 18-->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2307,7 +2521,7 @@ Comprar
 
 <!-- PRODUTO 19 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2354,7 +2568,7 @@ Comprar
 
 <!-- PRODUTO 19 pt 2 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2402,7 +2616,7 @@ Comprar
 
 <!-- PRODUTO 19 pt 3 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2449,7 +2663,7 @@ Comprar
 
 <!-- PRODUTO 19 pt 4 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2496,7 +2710,7 @@ Comprar
 
 <!-- PRODUTO 19 pt 5 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2543,7 +2757,7 @@ Comprar
 
 <!-- PRODUTO 20 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2595,7 +2809,7 @@ Comprar
 
 <!-- PRODUTO 21 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2642,7 +2856,7 @@ Comprar
 
 <!-- PRODUTO 22 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2689,7 +2903,7 @@ Comprar
 
 <!-- PRODUTO 23 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2736,7 +2950,7 @@ Comprar
 
 <!-- PRODUTO 24 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2784,7 +2998,7 @@ Comprar
 
 <!-- PRODUTO 25 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2836,7 +3050,7 @@ Comprar
 
 <!-- PRODUTO 26 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2888,7 +3102,7 @@ Comprar
 
 <!-- PRODUTO 27 -->
 
-<div class="produto">
+<div class="produto produto-extra">
 
 <div class="carrossel-container">
 
@@ -2940,6 +3154,14 @@ Comprar
 
 </div>
 
+<button
+class="btn-ver-mais"
+onclick="mostrarProdutos(this)">
+
+VER MAIS PRODUTOS
+
+</button>
+
 </div>
 
 </section>
@@ -2948,7 +3170,7 @@ Comprar
 <!-- SEÇÃO DE STREAMINGS -->
 
 
-<section class="produtos" id="produtos">
+<section class="produtos" id="streamings">
 
     <div class="container">
 
@@ -3374,15 +3596,519 @@ Comprar
 
 </div>
 
-<!-- SEÇÃO DE JOGOS -->
+<!-- produto final streamings-->
+
+<div class="produto streaming-extra">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (12).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (12).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
 
 </div>
+
+<div class="produto-info">
+
+<h3>Confira mais na Sapphire Store</h3>
+
+<p class="preco">
+Grátis
+</p>
+
+<a href="https://sapphirestore.com.br/?ref=brazzante" target="_blank" class="btn-comprar">
+Acessar
+</a>
+
+</div>
+
+</div>
+
+<!-- fim dos produtos -->
+
+    </div>
+
+        <button
+        class="btn-ver-mais"
+        onclick="mostrarStreamings(this)">
+
+        VER MAIS STREAMINGS
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="jogos" id="jogos">
+
+    <div class="container">
+
+<h1 class="titulo-secao">
+JOGOS (Sapphire Store)
+</h1>
+
+<div class="grid-produtos">
+
+<!-- Jogo 1 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (13).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (13).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>LEGO Batman: Legacy of the Dark Knight - Steam</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a href="https://sapphirestore.com.br/package/lego-batman:-legacy-of-the-dark-knight-steam?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- jogo 2 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (14).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (14).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Forza Horizon 6 - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a href="https://sapphirestore.com.br/package/forza-horizon-6(pre-venda)-steam-entrega-automatica?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- jogo 3-->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (15).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (15).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>PRAGMATA - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 29,90
+</p>
+
+<a href="https://sapphirestore.com.br/package/pragmata?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- jogo 4 -->
+
+<div class="produto">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (16).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (16).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>
+RESIDENT EVIL: Requiem - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 14,90
+</p>
+
+<a href="https://sapphirestore.com.br/package/resident-evil:-requiem-steam-entrega-automatica?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- Jogo 5 -->
+
+<div class="produto jogo-extra">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (17).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (17).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Crimson Desert - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 19,00
+</p>
+
+<a href="https://sapphirestore.com.br/package/crimson-desert-steam-entrega-automatica?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- Jogo 6 -->
+
+<div class="produto jogo-extra">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (18).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (18).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Poppy Playtime - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 19,00
+</p>
+
+<a href="https://sapphirestore.com.br/package/poppy-playtime-steam-entrega-automatica?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- Jogo 7 -->
+
+<div class="produto jogo-extra">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (19).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (19).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Death Stranding - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://sapphirestore.com.br/package/death-stranding-steam-entrega-automatica?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+<!-- Jogo 8 -->
+
+<div class="produto jogo-extra">
+
+<div class="carrossel-container">
+
+    <div class="desconto">
+    -10%
+    </div>
+
+<img
+class="carrossel-img"
+src="imagens/sapphire/img (20).webp"
+
+data-index="0"
+
+data-imagens='[
+"imagens/sapphire/img (20).webp",
+"imagens/sapphire/img (11).webp",
+"imagens/sapphire/img (10).webp",
+"imagens/sapphire/img (9).webp"
+]'
+
+onclick="abrirPopup(this)"
+>
+
+<button class="btn-carrossel btn-esquerda" onclick="trocarImagem(this,-1)">
+◀
+</button>
+
+<button class="btn-carrossel btn-direita" onclick="trocarImagem(this,1)">
+▶
+</button>
+
+</div>
+
+<div class="produto-info">
+
+<h3>Death Stranding 2 - Steam - Entrega automatica</h3>
+
+<p class="preco">
+R$ 19,90
+</p>
+
+<a href="https://sapphirestore.com.br/package/death-stranding-2-steam-entrega-automatica?ref=brazzante" target="_blank" class="btn-comprar">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+    <button
+    class="btn-ver-mais"
+    onclick="mostrarJogos(this)">
+
+    VER MAIS JOGOS
+
+    </button>
 
 </div>
 
 </section> 
 
-
+<br><br>
 
 <!-- BLOG -->
 
@@ -4043,5 +4769,79 @@ function fecharPopupPrincipal(){
 }
 
 </script>
+
+<script>
+
+function mostrarProdutos(btn){
+
+    const produtos =
+    document.querySelectorAll(".produto-extra");
+
+    const escondidos =
+    produtos[0].style.display === "" ||
+    produtos[0].style.display === "none";
+
+    produtos.forEach(produto => {
+
+        produto.style.display =
+        escondidos ? "block" : "none";
+
+    });
+
+    btn.innerText =
+    escondidos
+    ? "VER MENOS PRODUTOS"
+    : "VER MAIS PRODUTOS";
+
+}
+
+function mostrarStreamings(btn){
+
+    const streaming =
+    document.querySelectorAll(".streaming-extra");
+
+    const escondidos =
+    streaming[0].style.display === "" ||
+    streaming[0].style.display === "none";
+
+    streaming.forEach(streaming => {
+
+        streaming.style.display =
+        escondidos ? "block" : "none";
+
+    });
+
+    btn.innerText =
+    escondidos
+    ? "VER MENOS STREAMINGS"
+    : "VER MAIS STREAMINGS";
+
+}
+
+function mostrarJogos(btn){
+
+    const produtos =
+    document.querySelectorAll(".jogo-extra");
+
+    const escondidos =
+    produtos[0].style.display === "" ||
+    produtos[0].style.display === "none";
+
+    produtos.forEach(produto => {
+
+        produto.style.display =
+        escondidos ? "block" : "none";
+
+    });
+
+    btn.innerText =
+    escondidos
+    ? "VER MENOS JOGOS"
+    : "VER MAIS JOGOS";
+
+}
+
+</script>
+
 </body>
 </html>
