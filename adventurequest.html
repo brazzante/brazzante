@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<link rel="icon" type="image/png" href="imagens/favicon.webp">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+O FRACASSO? do ADVENTURE QUEST (Auge a Queda)
+</title>
+
+<meta name="description"
+content="A história completa do Click Jogos, o maior portal de jogos de navegador do Brasil que marcou milhões de crianças e adolescentes nos anos 2000.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#140000;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+header{
+    background:#220000;
+    padding:18px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-img{
+    width:140px;
+    height:40px;
+    object-fit:contain;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#a11212;
+}
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particula{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#cc0000;
+    border-radius:50%;
+    opacity:0.5;
+    animation:flutuar linear infinite;
+}
+
+@keyframes flutuar{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.7;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+.artigo{
+    padding:80px 20px;
+}
+
+.artigo-container{
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.artigo h1{
+    font-size:48px;
+    color:#c30000;
+    margin-bottom:25px;
+}
+
+.artigo p{
+    font-size:18px;
+    line-height:2;
+    color:#dddddd;
+    margin-bottom:28px;
+}
+
+.artigo h2{
+    color:#c30000;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.artigo img{
+    width:100%;
+    border-radius:18px;
+    margin:40px 0;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.video-container{
+
+    width:100%;
+
+    margin-bottom:40px;
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+footer{
+    background:#220000;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+.redes{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.redes a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .menu{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .artigo-container{
+        padding:25px;
+    }
+
+    .artigo h1{
+        font-size:34px;
+    }
+
+    .artigo h2{
+        font-size:26px;
+    }
+
+    .artigo p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="logo">
+
+<img
+src="imagens/logo.webp"
+alt="Brazzante"
+class="logo-img">
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+Loja
+</a>
+</li>
+
+<li>
+<a href="documentarios.html">
+Documentários
+</a>
+</li>
+
+<li>
+<a href="#contato">
+Contato
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="artigo">
+
+<div class="container">
+
+<div class="artigo-container">
+
+<!-- VIDEO -->
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/S4iGy3wTivU"
+title="Click Jogos"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h1>
+O Fracasso? do Adventure Quest (Auge a Queda)
+</h1>
+
+        <p>
+            A história começa com Adam Bohn, conhecido pelos jogadores como Artix.
+            Desde criança ele era apaixonado por videogames e sonhava em criar seu próprio jogo.
+        </p>
+
+        <p>
+            Estamos falando do final dos anos 90, uma época em que aprender programação
+            era muito mais complicado do que hoje.
+        </p>
+
+        <blockquote>
+            "Se vocês gostam tanto desses jogos, por que não fazem um?"
+        </blockquote>
+
+        <p>
+            A frase dita pelo pai de Adam acabou mudando completamente seu futuro.
+        </p>
+
+        <img src="documentarios\adventurequest\adambohn.webp" alt="Adam Bohn jovem">
+
+        <h2>As Mil Tentativas Antes do Sucesso</h2>
+
+        <p>
+            Adam passou anos criando projetos que fracassavam.
+            Segundo ele, foram necessárias cerca de mil tentativas até conseguir finalizar
+            um projeto funcional.
+        </p>
+
+        <p>
+            Muitos desses protótipos foram abandonados antes mesmo de se tornarem jogáveis.
+        </p>
+
+        <img src="documentarios\adventurequest\loreadvquest.webp" alt="Programação nos anos 90">
+
+        <h2>O Nascimento do AdventureQuest</h2>
+
+        <p>
+            Em 2002 surgiu o RPG em Flash chamado inicialmente de
+            <strong>L.O.R.E. (Land of Rising Evil)</strong>.
+        </p>
+
+        <p>
+            Pouco tempo depois o nome foi alterado para
+            <strong>AdventureQuest</strong>, enquanto Lore permaneceu como o universo onde
+            os jogos da franquia se passam.
+        </p>
+
+        <img src="documentarios\adventurequest\advquest1.webp" alt="Primeiras versões do AdventureQuest">
+
+        <p>
+            O jogo era simples: batalhas por turno, monstros, equipamentos e evolução de personagem.
+        </p>
+
+        <div class="curiosidade">
+            <h3>Curiosidade</h3>
+            <p>
+                O objetivo inicial de Adam era ter apenas 100 jogadores ativos.
+                Isso já seria suficiente para ele considerar o projeto um sucesso.
+            </p>
+        </div>
+
+        <h2>O Crescimento Inesperado</h2>
+
+        <p>
+            Pouco tempo após o lançamento, milhares de jogadores começaram a acessar o jogo.
+        </p>
+
+        <p>
+            Surpreso com o sucesso, Adam fundou oficialmente a
+            <strong>Artix Entertainment</strong> em outubro de 2002.
+        </p>
+
+        <img src="documentarios\adventurequest\artixentertainment.webp" alt="Artix Entertainment">
+
+        <h2>A Filosofia que Fez a Diferença</h2>
+
+        <p>
+            Enquanto muitas empresas lançavam jogos e partiam para o próximo projeto,
+            a Artix decidiu seguir um caminho diferente.
+        </p>
+
+        <p>
+            O AdventureQuest passou a receber atualizações semanais,
+            uma tradição que continua até os dias atuais.
+        </p>
+
+        <h2>O Surgimento de Novos Jogos</h2>
+
+        <h3>DragonFable (2005)</h3>
+
+        <img src="documentarios\adventurequest\dragonfable.webp" alt="DragonFable">
+
+        <p>
+            Uma evolução natural do AdventureQuest, trazendo gráficos mais detalhados
+            e uma narrativa mais profunda.
+        </p>
+
+        <h3>MechQuest (2007)</h3>
+
+        <img src="documentarios\adventurequest\mechquest.webp" alt="MechQuest">
+
+        <p>
+            Trocando fantasia medieval por ficção científica, robôs gigantes e viagens espaciais.
+        </p>
+
+        <h3>AdventureQuest Worlds (2008)</h3>
+
+        <img src="documentarios\adventurequest\aqwords.webp" alt="AdventureQuest Worlds">
+
+        <p>
+            O maior salto da franquia.
+            Pela primeira vez os jogadores podiam compartilhar o mesmo mundo online.
+        </p>
+
+        <h2>A Expansão do Universo Artix</h2>
+
+        <p>
+            Entre 2009 e 2015 a empresa lançou diversos projetos:
+        </p>
+
+        <ul>
+            <li>WarpForce</li>
+            <li>EpicDuel</li>
+            <li>HeroSmash</li>
+            <li>OverSoul</li>
+            <li>Battle Gems</li>
+            <li>BioBeasts</li>
+            <li>AdventureQuest Dragons</li>
+        </ul>
+
+        <h2>AdventureQuest 3D</h2>
+
+        <img src="documentarios\adventurequest\aq3d.webp" alt="AdventureQuest 3D">
+
+        <p>
+            Em 2016 a franquia finalmente chegou ao ambiente tridimensional.
+        </p>
+
+        <p>
+            O jogo foi desenvolvido para funcionar tanto em computadores quanto em dispositivos móveis,
+            compartilhando os mesmos servidores.
+        </p>
+
+        <h2>O Fim do Flash e a Solução da Artix</h2>
+
+        <img src="documentarios\adventurequest\launcher.webp" alt="Artix Launcher">
+
+        <p>
+            Com o anúncio do encerramento do Adobe Flash em 2018,
+            a empresa criou seu próprio launcher para preservar seus jogos clássicos.
+        </p>
+
+        <p>
+            Essa iniciativa permitiu que os títulos continuassem funcionando mesmo após o fim da tecnologia.
+        </p>
+
+        <h2>O Retorno às Origens: Jogos para NES</h2>
+
+        <img src="documentarios\adventurequest\nes-artix.webp" alt="Jogos de NES da Artix">
+
+        <p>
+            Adam também realizou um sonho pessoal criando jogos para o Nintendo Entertainment System.
+        </p>
+
+        <ul>
+            <li>Artix: Knight of the Living Dead</li>
+            <li>Dungeons & DoomKnights</li>
+        </ul>
+
+        <p>
+            Mais do que projetos comerciais, foram homenagens às raízes que inspiraram sua carreira.
+        </p>
+
+        <h2>AQW Infinity e o Futuro da Franquia</h2>
+
+        <p>
+            Em 2026 foi anunciado o AdventureQuest Worlds: Infinity.
+        </p>
+
+        <p>
+        O projeto reconstrói completamente o AQWorlds utilizando a engine Unity,
+        permitindo lançamento para Steam, Android, iOS e PCs modernos.
+        </p>
+
+        <h3>Mais de US$ 2 milhões arrecadados</h3>
+
+        <img src="documentarios\adventurequest\aqinfinity.webp" alt="AQW Infinity">
+
+        <p>
+        A campanha de financiamento coletivo ultrapassou 28 mil apoiadores,
+        demonstrando a força da comunidade construída ao longo de mais de duas décadas.
+        </p>
+
+        <h2>Um Legado Construído na Persistência</h2>
+
+        <p>
+            O AdventureQuest não nasceu dentro de uma grande empresa.
+        </p>
+
+        <p>
+            Ele surgiu da persistência de alguém que falhou inúmeras vezes,
+            mas continuou tentando até transformar um simples RPG em Flash
+            em uma das franquias mais duradouras da internet.
+        </p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+
+<p>
+© 2026 Brazzante - Todos os direitos reservados
+</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/obrazzante"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@obrazzante2"
+target="_blank">
+YouTube
+</a>
+
+<a href="https://store.steampowered.com/app/4305620/Brazzante/"
+target="_blank">
+Steam
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+const particles = document.getElementById("particles");
+
+for(let i = 0; i < 80; i++){
+
+    const particula =
+    document.createElement("div");
+
+    particula.classList.add("particula");
+
+    particula.style.left =
+    Math.random() * 100 + "vw";
+
+    particula.style.animationDuration =
+    (Math.random() * 10 + 5) + "s";
+
+    particula.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particula.style.opacity =
+    Math.random();
+
+    particula.style.width =
+    particula.style.height =
+    (Math.random() * 4 + 2) + "px";
+
+    particles.appendChild(particula);
+
+}
+
+</script>
+
+</body>
+</html>
