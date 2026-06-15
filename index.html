@@ -1353,33 +1353,68 @@ POPUP MANUTENÇÃO
 .atalho-btn{
 
     display:flex;
-
     justify-content:center;
     align-items:center;
 
-    background:#940000;
+    min-height:120px;
 
     color:white;
-
     text-decoration:none;
-
     font-weight:bold;
-
-    padding:18px;
+    font-size:20px;
 
     border-radius:12px;
 
+    position:relative;
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
     transition:.3s;
 
-    box-shadow:
-    0 4px 12px rgba(0,0,0,.25);
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.atalho-btn::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+}
+
+.atalho-btn span{
+
+    position:relative;
+    z-index:2;
 }
 
 .atalho-btn:hover{
 
-    background:#b30000;
-
     transform:translateY(-3px);
+}
+.btn-produtos{
+    background-image:url("imagens/produtos.webp");
+}
+
+.btn-streamings{
+    background-image:url("imagens/streamings.webp");
+}
+
+.btn-jogos{
+    background-image:url("imagens/jogos.webp");
+}
+
+.btn-novidades{
+    background-image:url("imagens/novidades.webp");
+}
+
+.btn-contato{
+    background-image:url("imagens/contato.webp");
 }
 
 /* MOBILE */
@@ -1398,7 +1433,7 @@ POPUP MANUTENÇÃO
 </head>
 
 <body>
-
+<div id="inicio"></div>
 <!-- POPUP LOJA EM MANUTENÇÃO (retirar comentário para ativar)
 
 <div id="popupManutencao" class="popup-overlay">
@@ -1464,7 +1499,7 @@ POPUP MANUTENÇÃO
 
 <nav><ul>
 
-<li><a href="#produtos">Início</a></li>
+<li><a href="#inicio">Início</a></li>
 
 <li><a href="documentarios.html">Documentários</a></li>
 
@@ -1571,25 +1606,25 @@ POPUP MANUTENÇÃO
 
         <div class="atalhos-grid">
 
-            <a href="#produtos" class="atalho-btn">
-                Produtos
-            </a>
+        <a href="#produtos" class="atalho-btn btn-produtos">
+            <span>Produtos</span>
+        </a>
 
-            <a href="#streamings" class="atalho-btn">
-                Streamings
-            </a>
+        <a href="#streamings" class="atalho-btn btn-streamings">
+            <span>Streamings</span>
+        </a>
 
-            <a href="#jogos" class="atalho-btn">
-                Jogos
-            </a>
+        <a href="#jogos" class="atalho-btn btn-jogos">
+            <span>Jogos</span>
+        </a>
 
-            <a href="#blog" class="atalho-btn">
-                Novidades
-            </a>
+        <a href="#blog" class="atalho-btn btn-novidades">
+            <span>Novidades</span>
+        </a>
 
-            <a href="#contato" class="atalho-btn">
-                Contato
-            </a>
+        <a href="#contato" class="atalho-btn btn-contato">
+            <span>Contato</span>
+        </a>
 
         </div>
 
